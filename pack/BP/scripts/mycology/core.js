@@ -7,7 +7,7 @@ export function weight(rarity) {
 export function makeTable(definitions) {
   if (!definitions.length) throw new RangeError('empty appraisal table');
   let total = 0;
-  const entries = definitions.map(d => ({ definition:d, upper:(total += weight(d.rarity)) }));
+  const entries = definitions.map(d => { const w=d.drawWeight??weight(d.rarity); if(!Number.isInteger(w)||w<1)throw new RangeError('invalid draw weight'); return {definition:d,upper:(total+=w)}; });
   return { entries, total };
 }
 export function draw(table, rng = Math.random) {

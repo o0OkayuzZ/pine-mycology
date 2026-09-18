@@ -109,6 +109,66 @@
     },
     "pinene_myco_field_guide": {
       "textures": "textures/items/mycology_tools/field_guide"
+    },
+    "pinene_myco_nf_001": {
+      "textures": "textures/items/mycology/nether/nf_001"
+    },
+    "pinene_myco_nf_002": {
+      "textures": "textures/items/mycology/nether/nf_002"
+    },
+    "pinene_myco_nf_003": {
+      "textures": "textures/items/mycology/nether/nf_003"
+    },
+    "pinene_myco_nf_004": {
+      "textures": "textures/items/mycology/nether/nf_004"
+    },
+    "pinene_myco_nf_005": {
+      "textures": "textures/items/mycology/nether/nf_005"
+    },
+    "pinene_myco_nf_006": {
+      "textures": "textures/items/mycology/nether/nf_006"
+    },
+    "pinene_myco_nf_007": {
+      "textures": "textures/items/mycology/nether/nf_007"
+    },
+    "pinene_myco_nf_008": {
+      "textures": "textures/items/mycology/nether/nf_008"
+    },
+    "pinene_myco_nf_009": {
+      "textures": "textures/items/mycology/nether/nf_009"
+    },
+    "pinene_myco_nf_010": {
+      "textures": "textures/items/mycology/nether/nf_010"
+    },
+    "pinene_myco_nf_011": {
+      "textures": "textures/items/mycology/nether/nf_011"
+    },
+    "pinene_myco_nf_012": {
+      "textures": "textures/items/mycology/nether/nf_012"
+    },
+    "pinene_myco_nf_013": {
+      "textures": "textures/items/mycology/nether/nf_013"
+    },
+    "pinene_myco_nf_014": {
+      "textures": "textures/items/mycology/nether/nf_014"
+    },
+    "pinene_myco_nf_015": {
+      "textures": "textures/items/mycology/nether/nf_015"
+    },
+    "pinene_myco_nf_016": {
+      "textures": "textures/items/mycology/nether/nf_016"
+    },
+    "pinene_myco_nf_017": {
+      "textures": "textures/items/mycology/nether/nf_017"
+    },
+    "pinene_myco_nf_018": {
+      "textures": "textures/items/mycology/nether/nf_018"
+    },
+    "pinene_myco_nf_019": {
+      "textures": "textures/items/mycology/nether/nf_019"
+    },
+    "pinene_myco_nf_020": {
+      "textures": "textures/items/mycology/nether/nf_020"
     }
   }
 }

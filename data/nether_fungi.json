@@ -1,7 +1,9 @@
 {
   "version": 1,
-  "enabledCount": 20,
-  "futureCount": 100,
+  "inputItems": {
+    "crimson": "minecraft:crimson_fungus",
+    "warped": "minecraft:warped_fungus"
+  },
   "entries": [
     {
       "id": "NF-001",
@@ -10,19 +12,17 @@
       "itemId": "pinene:nf_001",
       "nameJa": "ボツリヌス菌茸",
       "scientificName": "Clostridium botulinum",
+      "classification": "細菌・偏性嫌気性・芽胞形成菌",
       "rarity": 10,
       "drawWeight": 1,
+      "drawProbabilityPercent": 0.092421,
       "textureKey": "pinene_myco_nf_001",
-      "texturePath": "textures/items/nether_fungi/nf_001",
+      "texturePath": "textures/items/mycology/nether/nf_001",
       "useMode": "eat",
-      "realWorldStatus": "specimen",
       "food": {
-        "nutrition": 0,
-        "saturationModifier": 0.1,
-        "alwaysEat": true,
-        "useSeconds": 1.6
+        "nutrition": 1,
+        "saturationModifier": 0.1
       },
-      "cooldownSeconds": 4,
       "effects": [
         {
           "effect": "weakness",
@@ -35,15 +35,14 @@
           "seconds": 480
         }
       ],
-      "special": null,
       "lethal": {
         "chance": 0.3,
-        "delaySeconds": 300,
-        "deathMessages": [
-          "{name} は身体を動かせなくなった"
-        ]
+        "delaySeconds": 300
       },
-      "isNetherFungus": true
+      "scienceJa": "芽胞を形成し、一部の系統が非常に強力なボツリヌス神経毒素を産生する。",
+      "gameExplanationJa": "食用すると長時間の強いデバフを受ける。牛乳で通常効果とPine Mycologyの致死タイマーを解除できる。",
+      "jokeJa": "牛乳を持たずに試食する勇気だけは認める。",
+      "source": "nether"
     },
     {
       "id": "NF-002",
@@ -52,19 +51,17 @@
       "itemId": "pinene:nf_002",
       "nameJa": "破傷風菌茸",
       "scientificName": "Clostridium tetani",
+      "classification": "細菌・偏性嫌気性・芽胞形成菌",
       "rarity": 9,
       "drawWeight": 3,
+      "drawProbabilityPercent": 0.277264,
       "textureKey": "pinene_myco_nf_002",
-      "texturePath": "textures/items/nether_fungi/nf_002",
+      "texturePath": "textures/items/mycology/nether/nf_002",
       "useMode": "eat",
-      "realWorldStatus": "specimen",
       "food": {
-        "nutrition": 0,
-        "saturationModifier": 0.1,
-        "alwaysEat": true,
-        "useSeconds": 1.6
+        "nutrition": 1,
+        "saturationModifier": 0.1
       },
-      "cooldownSeconds": 4,
       "effects": [
         {
           "effect": "slowness",
@@ -77,15 +74,14 @@
           "seconds": 420
         }
       ],
-      "special": null,
       "lethal": {
         "chance": 0.2,
-        "delaySeconds": 300,
-        "deathMessages": [
-          "{name} は硬直したまま力尽きた"
-        ]
+        "delaySeconds": 300
       },
-      "isNetherFungus": true
+      "scienceJa": "菌体端に球状芽胞を形成し、神経毒テタノスパスミンを産生する。",
+      "gameExplanationJa": "食用すると長時間の強いデバフを受ける。牛乳で通常効果とPine Mycologyの致死タイマーを解除できる。",
+      "jokeJa": "牛乳を持たずに試食する勇気だけは認める。",
+      "source": "nether"
     },
     {
       "id": "NF-003",
@@ -94,19 +90,17 @@
       "itemId": "pinene:nf_003",
       "nameJa": "梅毒トレポネーマ茸",
       "scientificName": "Treponema pallidum subsp. pallidum",
+      "classification": "細菌・スピロヘータ",
       "rarity": 6,
       "drawWeight": 9,
+      "drawProbabilityPercent": 0.831793,
       "textureKey": "pinene_myco_nf_003",
-      "texturePath": "textures/items/nether_fungi/nf_003",
+      "texturePath": "textures/items/mycology/nether/nf_003",
       "useMode": "eat",
-      "realWorldStatus": "specimen",
       "food": {
-        "nutrition": 0,
-        "saturationModifier": 0.1,
-        "alwaysEat": true,
-        "useSeconds": 1.6
+        "nutrition": 1,
+        "saturationModifier": 0.1
       },
-      "cooldownSeconds": 4,
       "effects": [
         {
           "effect": "wither",
@@ -119,9 +113,10 @@
           "seconds": 900
         }
       ],
-      "special": null,
-      "lethal": null,
-      "isNetherFungus": true
+      "scienceJa": "非常に細長い螺旋形の細菌で、未治療では長期に全身へ影響しうる。",
+      "gameExplanationJa": "食用すると長時間の強いデバフを受ける。牛乳で通常効果とPine Mycologyの致死タイマーを解除できる。",
+      "jokeJa": "標本として眺めるだけなら平和だった。",
+      "source": "nether"
     },
     {
       "id": "NF-004",
@@ -130,19 +125,17 @@
       "itemId": "pinene:nf_004",
       "nameJa": "HIV茸",
       "scientificName": "Human immunodeficiency virus 1",
+      "classification": "レトロウイルス",
       "rarity": 9,
       "drawWeight": 3,
+      "drawProbabilityPercent": 0.277264,
       "textureKey": "pinene_myco_nf_004",
-      "texturePath": "textures/items/nether_fungi/nf_004",
+      "texturePath": "textures/items/mycology/nether/nf_004",
       "useMode": "eat",
-      "realWorldStatus": "specimen",
       "food": {
-        "nutrition": 0,
-        "saturationModifier": 0.1,
-        "alwaysEat": true,
-        "useSeconds": 1.6
+        "nutrition": 1,
+        "saturationModifier": 0.1
       },
-      "cooldownSeconds": 4,
       "effects": [
         {
           "effect": "weakness",
@@ -150,9 +143,10 @@
           "seconds": 1200
         }
       ],
-      "special": null,
-      "lethal": null,
-      "isNetherFungus": true
+      "scienceJa": "RNAを逆転写してDNA化し、宿主ゲノムへ組み込む。主にCD4陽性T細胞などを標的とする。",
+      "gameExplanationJa": "食用すると長時間の強いデバフを受ける。牛乳で通常効果とPine Mycologyの致死タイマーを解除できる。",
+      "jokeJa": "標本として眺めるだけなら平和だった。",
+      "source": "nether"
     },
     {
       "id": "NF-005",
@@ -161,19 +155,17 @@
       "itemId": "pinene:nf_005",
       "nameJa": "ペニシリウム茸",
       "scientificName": "Penicillium rubens",
+      "classification": "真菌・子嚢菌類",
       "rarity": 2,
       "drawWeight": 17,
+      "drawProbabilityPercent": 1.571165,
       "textureKey": "pinene_myco_nf_005",
-      "texturePath": "textures/items/nether_fungi/nf_005",
+      "texturePath": "textures/items/mycology/nether/nf_005",
       "useMode": "eat",
-      "realWorldStatus": "specimen",
       "food": {
-        "nutrition": 0,
-        "saturationModifier": 0.1,
-        "alwaysEat": true,
-        "useSeconds": 1.6
+        "nutrition": 1,
+        "saturationModifier": 0.1
       },
-      "cooldownSeconds": 4,
       "effects": [
         {
           "effect": "nausea",
@@ -186,9 +178,10 @@
           "seconds": 180
         }
       ],
-      "special": null,
-      "lethal": null,
-      "isNetherFungus": true
+      "scienceJa": "筆状に枝分かれする分生子形成構造を持つカビ。",
+      "gameExplanationJa": "食用すると長時間の強いデバフを受ける。牛乳で通常効果とPine Mycologyの致死タイマーを解除できる。",
+      "jokeJa": "標本として眺めるだけなら平和だった。",
+      "source": "nether"
     },
     {
       "id": "NF-006",
@@ -197,19 +190,17 @@
       "itemId": "pinene:nf_006",
       "nameJa": "結核菌茸",
       "scientificName": "Mycobacterium tuberculosis",
+      "classification": "細菌・抗酸菌",
       "rarity": 8,
       "drawWeight": 5,
+      "drawProbabilityPercent": 0.462107,
       "textureKey": "pinene_myco_nf_006",
-      "texturePath": "textures/items/nether_fungi/nf_006",
+      "texturePath": "textures/items/mycology/nether/nf_006",
       "useMode": "eat",
-      "realWorldStatus": "specimen",
       "food": {
-        "nutrition": 0,
-        "saturationModifier": 0.1,
-        "alwaysEat": true,
-        "useSeconds": 1.6
+        "nutrition": 1,
+        "saturationModifier": 0.1
       },
-      "cooldownSeconds": 4,
       "effects": [
         {
           "effect": "wither",
@@ -222,15 +213,14 @@
           "seconds": 1200
         }
       ],
-      "special": null,
       "lethal": {
         "chance": 0.1,
-        "delaySeconds": 600,
-        "deathMessages": [
-          "{name} は長い消耗に耐えられなかった"
-        ]
+        "delaySeconds": 600
       },
-      "isNetherFungus": true
+      "scienceJa": "ミコール酸に富む細胞表層を持ち、慢性感染や潜伏感染を成立させる。",
+      "gameExplanationJa": "食用すると長時間の強いデバフを受ける。牛乳で通常効果とPine Mycologyの致死タイマーを解除できる。",
+      "jokeJa": "牛乳を持たずに試食する勇気だけは認める。",
+      "source": "nether"
     },
     {
       "id": "NF-007",
@@ -239,19 +229,17 @@
       "itemId": "pinene:nf_007",
       "nameJa": "ハロバクテリウム茸",
       "scientificName": "Halobacterium salinarum",
+      "classification": "古細菌",
       "rarity": 1,
       "drawWeight": 19,
+      "drawProbabilityPercent": 1.756007,
       "textureKey": "pinene_myco_nf_007",
-      "texturePath": "textures/items/nether_fungi/nf_007",
+      "texturePath": "textures/items/mycology/nether/nf_007",
       "useMode": "eat",
-      "realWorldStatus": "specimen",
       "food": {
-        "nutrition": 0,
-        "saturationModifier": 0.1,
-        "alwaysEat": true,
-        "useSeconds": 1.6
+        "nutrition": 1,
+        "saturationModifier": 0.1
       },
-      "cooldownSeconds": 4,
       "effects": [
         {
           "effect": "hunger",
@@ -259,9 +247,10 @@
           "seconds": 300
         }
       ],
-      "special": null,
-      "lethal": null,
-      "isNetherFungus": true
+      "scienceJa": "極端な高塩環境へ適応し、バクテリオロドプシンで光エネルギーを利用できる。",
+      "gameExplanationJa": "食用すると長時間の強いデバフを受ける。牛乳で通常効果とPine Mycologyの致死タイマーを解除できる。",
+      "jokeJa": "標本として眺めるだけなら平和だった。",
+      "source": "nether"
     },
     {
       "id": "NF-008",
@@ -270,103 +259,61 @@
       "itemId": "pinene:nf_008",
       "nameJa": "ミミウイルス茸",
       "scientificName": "Acanthamoeba polyphaga mimivirus",
+      "classification": "巨大DNAウイルス",
       "rarity": 1,
       "drawWeight": 19,
+      "drawProbabilityPercent": 1.756007,
       "textureKey": "pinene_myco_nf_008",
-      "texturePath": "textures/items/nether_fungi/nf_008",
+      "texturePath": "textures/items/mycology/nether/nf_008",
       "useMode": "eat",
-      "realWorldStatus": "specimen",
       "food": {
-        "nutrition": 0,
-        "saturationModifier": 0.1,
-        "alwaysEat": true,
-        "useSeconds": 1.6
+        "nutrition": 1,
+        "saturationModifier": 0.1
       },
-      "cooldownSeconds": 4,
       "effects": [],
       "special": {
-        "kind": "choice",
+        "kind": "random_debuff",
         "choices": [
           {
-            "weight": 1,
-            "effects": [
-              {
-                "effect": "weakness",
-                "level": 4,
-                "seconds": 480
-              }
-            ]
+            "effect": "blindness",
+            "level": 1,
+            "seconds": 480
           },
           {
-            "weight": 1,
-            "effects": [
-              {
-                "effect": "slowness",
-                "level": 4,
-                "seconds": 480
-              }
-            ]
+            "effect": "slowness",
+            "level": 5,
+            "seconds": 480
           },
           {
-            "weight": 1,
-            "effects": [
-              {
-                "effect": "mining_fatigue",
-                "level": 4,
-                "seconds": 480
-              }
-            ]
+            "effect": "weakness",
+            "level": 5,
+            "seconds": 480
           },
           {
-            "weight": 1,
-            "effects": [
-              {
-                "effect": "hunger",
-                "level": 6,
-                "seconds": 480
-              }
-            ]
+            "effect": "mining_fatigue",
+            "level": 5,
+            "seconds": 480
           },
           {
-            "weight": 1,
-            "effects": [
-              {
-                "effect": "nausea",
-                "level": 2,
-                "seconds": 480
-              }
-            ]
+            "effect": "hunger",
+            "level": 8,
+            "seconds": 480
           },
           {
-            "weight": 1,
-            "effects": [
-              {
-                "effect": "blindness",
-                "level": 1,
-                "seconds": 480
-              }
-            ]
-          },
-          {
-            "weight": 1,
-            "effects": [
-              {
-                "effect": "wither",
-                "level": 2,
-                "seconds": 480
-              }
-            ]
+            "effect": "nausea",
+            "level": 2,
+            "seconds": 480
           }
         ]
       },
       "lethal": {
         "chance": 0.05,
-        "delaySeconds": 360,
-        "deathMessages": [
-          "{name} は巨大ウイルス茸に負けた"
-        ]
+        "delaySeconds": 360
       },
-      "isNetherFungus": true
+      "scienceJa": "粒子・ゲノムとも非常に大きく、発見当初は細菌と誤認された。",
+      "gameExplanationJa": "食用すると長時間の強いデバフを受ける。牛乳で通常効果とPine Mycologyの致死タイマーを解除できる。",
+      "jokeJa": "牛乳を持たずに試食する勇気だけは認める。",
+      "source": "nether"
     },
     {
       "id": "NF-009",
@@ -375,19 +322,17 @@
       "itemId": "pinene:nf_009",
       "nameJa": "ペスト菌茸",
       "scientificName": "Yersinia pestis",
+      "classification": "細菌",
       "rarity": 9,
       "drawWeight": 3,
+      "drawProbabilityPercent": 0.277264,
       "textureKey": "pinene_myco_nf_009",
-      "texturePath": "textures/items/nether_fungi/nf_009",
+      "texturePath": "textures/items/mycology/nether/nf_009",
       "useMode": "eat",
-      "realWorldStatus": "specimen",
       "food": {
-        "nutrition": 0,
-        "saturationModifier": 0.1,
-        "alwaysEat": true,
-        "useSeconds": 1.6
+        "nutrition": 1,
+        "saturationModifier": 0.1
       },
-      "cooldownSeconds": 4,
       "effects": [
         {
           "effect": "wither",
@@ -400,15 +345,14 @@
           "seconds": 600
         }
       ],
-      "special": null,
       "lethal": {
         "chance": 0.7,
-        "delaySeconds": 300,
-        "deathMessages": [
-          "{name} は黒死に呑まれた"
-        ]
+        "delaySeconds": 300
       },
-      "isNetherFungus": true
+      "scienceJa": "ペストの原因菌で、主にげっ歯類とノミの感染環に関係する。",
+      "gameExplanationJa": "食用すると長時間の強いデバフを受ける。牛乳で通常効果とPine Mycologyの致死タイマーを解除できる。",
+      "jokeJa": "牛乳を持たずに試食する勇気だけは認める。",
+      "source": "nether"
     },
     {
       "id": "NF-010",
@@ -417,19 +361,17 @@
       "itemId": "pinene:nf_010",
       "nameJa": "狂犬病ウイルス茸",
       "scientificName": "Rabies virus",
+      "classification": "RNAウイルス・リッサウイルス類",
       "rarity": 10,
       "drawWeight": 1,
+      "drawProbabilityPercent": 0.092421,
       "textureKey": "pinene_myco_nf_010",
-      "texturePath": "textures/items/nether_fungi/nf_010",
+      "texturePath": "textures/items/mycology/nether/nf_010",
       "useMode": "eat",
-      "realWorldStatus": "specimen",
       "food": {
-        "nutrition": 0,
-        "saturationModifier": 0.1,
-        "alwaysEat": true,
-        "useSeconds": 1.6
+        "nutrition": 1,
+        "saturationModifier": 0.1
       },
-      "cooldownSeconds": 4,
       "effects": [
         {
           "effect": "nausea",
@@ -442,15 +384,14 @@
           "seconds": 900
         }
       ],
-      "special": null,
       "lethal": {
         "chance": 1,
-        "delaySeconds": 480,
-        "deathMessages": [
-          "{name} は水を恐れたまま息絶えた"
-        ]
+        "delaySeconds": 480
       },
-      "isNetherFungus": true
+      "scienceJa": "末梢神経から中枢神経系へ侵入する人獣共通感染症ウイルス。",
+      "gameExplanationJa": "食用すると長時間の強いデバフを受ける。牛乳で通常効果とPine Mycologyの致死タイマーを解除できる。",
+      "jokeJa": "牛乳を持たずに試食する勇気だけは認める。",
+      "source": "nether"
     },
     {
       "id": "NF-011",
@@ -459,19 +400,17 @@
       "itemId": "pinene:nf_011",
       "nameJa": "天然痘ウイルス茸",
       "scientificName": "Variola virus",
+      "classification": "ポックスウイルス",
       "rarity": 10,
       "drawWeight": 1,
+      "drawProbabilityPercent": 0.092421,
       "textureKey": "pinene_myco_nf_011",
-      "texturePath": "textures/items/nether_fungi/nf_011",
+      "texturePath": "textures/items/mycology/nether/nf_011",
       "useMode": "eat",
-      "realWorldStatus": "specimen",
       "food": {
-        "nutrition": 0,
-        "saturationModifier": 0.1,
-        "alwaysEat": true,
-        "useSeconds": 1.6
+        "nutrition": 1,
+        "saturationModifier": 0.1
       },
-      "cooldownSeconds": 4,
       "effects": [
         {
           "effect": "poison",
@@ -484,15 +423,14 @@
           "seconds": 720
         }
       ],
-      "special": null,
       "lethal": {
         "chance": 0.3,
-        "delaySeconds": 420,
-        "deathMessages": [
-          "{name} は天然痘菌茸に耐えられなかった"
-        ]
+        "delaySeconds": 420
       },
-      "isNetherFungus": true
+      "scienceJa": "天然痘の原因ウイルス。世界規模の予防接種により1980年に根絶が宣言された。",
+      "gameExplanationJa": "食用すると長時間の強いデバフを受ける。牛乳で通常効果とPine Mycologyの致死タイマーを解除できる。",
+      "jokeJa": "牛乳を持たずに試食する勇気だけは認める。",
+      "source": "nether"
     },
     {
       "id": "NF-012",
@@ -501,19 +439,17 @@
       "itemId": "pinene:nf_012",
       "nameJa": "志賀赤痢菌茸",
       "scientificName": "Shigella dysenteriae type 1",
+      "classification": "細菌",
       "rarity": 8,
       "drawWeight": 5,
+      "drawProbabilityPercent": 0.462107,
       "textureKey": "pinene_myco_nf_012",
-      "texturePath": "textures/items/nether_fungi/nf_012",
+      "texturePath": "textures/items/mycology/nether/nf_012",
       "useMode": "eat",
-      "realWorldStatus": "specimen",
       "food": {
-        "nutrition": 0,
-        "saturationModifier": 0.1,
-        "alwaysEat": true,
-        "useSeconds": 1.6
+        "nutrition": 1,
+        "saturationModifier": 0.1
       },
-      "cooldownSeconds": 4,
       "effects": [
         {
           "effect": "hunger",
@@ -526,15 +462,14 @@
           "seconds": 420
         }
       ],
-      "special": null,
       "lethal": {
         "chance": 0.1,
-        "delaySeconds": 360,
-        "deathMessages": [
-          "{name} の腹は完全に敗北した"
-        ]
+        "delaySeconds": 360
       },
-      "isNetherFungus": true
+      "scienceJa": "細菌性赤痢の原因菌の一つで、1型は強力な志賀毒素を産生する。",
+      "gameExplanationJa": "食用すると長時間の強いデバフを受ける。牛乳で通常効果とPine Mycologyの致死タイマーを解除できる。",
+      "jokeJa": "牛乳を持たずに試食する勇気だけは認める。",
+      "source": "nether"
     },
     {
       "id": "NF-013",
@@ -543,19 +478,17 @@
       "itemId": "pinene:nf_013",
       "nameJa": "HSV-2茸",
       "scientificName": "Herpes simplex virus type 2",
+      "classification": "ヘルペスウイルス",
       "rarity": 4,
       "drawWeight": 13,
+      "drawProbabilityPercent": 1.201479,
       "textureKey": "pinene_myco_nf_013",
-      "texturePath": "textures/items/nether_fungi/nf_013",
+      "texturePath": "textures/items/mycology/nether/nf_013",
       "useMode": "eat",
-      "realWorldStatus": "specimen",
       "food": {
-        "nutrition": 0,
-        "saturationModifier": 0.1,
-        "alwaysEat": true,
-        "useSeconds": 1.6
+        "nutrition": 1,
+        "saturationModifier": 0.1
       },
-      "cooldownSeconds": 4,
       "effects": [
         {
           "effect": "weakness",
@@ -568,9 +501,10 @@
           "seconds": 900
         }
       ],
-      "special": null,
-      "lethal": null,
-      "isNetherFungus": true
+      "scienceJa": "主に性器ヘルペスに関係し、神経節へ潜伏して再活性化することがある。",
+      "gameExplanationJa": "食用すると長時間の強いデバフを受ける。牛乳で通常効果とPine Mycologyの致死タイマーを解除できる。",
+      "jokeJa": "標本として眺めるだけなら平和だった。",
+      "source": "nether"
     },
     {
       "id": "NF-014",
@@ -579,19 +513,17 @@
       "itemId": "pinene:nf_014",
       "nameJa": "HPV16茸",
       "scientificName": "Human papillomavirus type 16",
+      "classification": "DNAウイルス",
       "rarity": 6,
       "drawWeight": 9,
+      "drawProbabilityPercent": 0.831793,
       "textureKey": "pinene_myco_nf_014",
-      "texturePath": "textures/items/nether_fungi/nf_014",
+      "texturePath": "textures/items/mycology/nether/nf_014",
       "useMode": "eat",
-      "realWorldStatus": "specimen",
       "food": {
-        "nutrition": 0,
-        "saturationModifier": 0.1,
-        "alwaysEat": true,
-        "useSeconds": 1.6
+        "nutrition": 1,
+        "saturationModifier": 0.1
       },
-      "cooldownSeconds": 4,
       "effects": [
         {
           "effect": "mining_fatigue",
@@ -604,9 +536,10 @@
           "seconds": 1800
         }
       ],
-      "special": null,
-      "lethal": null,
-      "isNetherFungus": true
+      "scienceJa": "持続感染が子宮頸がんなどの発生に関与する高リスクHPVの代表。",
+      "gameExplanationJa": "食用すると長時間の強いデバフを受ける。牛乳で通常効果とPine Mycologyの致死タイマーを解除できる。",
+      "jokeJa": "標本として眺めるだけなら平和だった。",
+      "source": "nether"
     },
     {
       "id": "NF-015",
@@ -615,19 +548,17 @@
       "itemId": "pinene:nf_015",
       "nameJa": "トリコモナス茸",
       "scientificName": "Trichomonas vaginalis",
+      "classification": "寄生性原生生物",
       "rarity": 3,
       "drawWeight": 15,
+      "drawProbabilityPercent": 1.386322,
       "textureKey": "pinene_myco_nf_015",
-      "texturePath": "textures/items/nether_fungi/nf_015",
+      "texturePath": "textures/items/mycology/nether/nf_015",
       "useMode": "eat",
-      "realWorldStatus": "specimen",
       "food": {
-        "nutrition": 0,
-        "saturationModifier": 0.1,
-        "alwaysEat": true,
-        "useSeconds": 1.6
+        "nutrition": 1,
+        "saturationModifier": 0.1
       },
-      "cooldownSeconds": 4,
       "effects": [
         {
           "effect": "nausea",
@@ -640,9 +571,10 @@
           "seconds": 600
         }
       ],
-      "special": null,
-      "lethal": null,
-      "isNetherFungus": true
+      "scienceJa": "複数の鞭毛を持ち、泌尿生殖器に感染する寄生原虫。",
+      "gameExplanationJa": "食用すると長時間の強いデバフを受ける。牛乳で通常効果とPine Mycologyの致死タイマーを解除できる。",
+      "jokeJa": "標本として眺めるだけなら平和だった。",
+      "source": "nether"
     },
     {
       "id": "NF-016",
@@ -651,19 +583,17 @@
       "itemId": "pinene:nf_016",
       "nameJa": "CJDプリオン茸",
       "scientificName": "Disease-associated prion protein (PrPSc)",
+      "classification": "感染性タンパク質",
       "rarity": 10,
       "drawWeight": 1,
+      "drawProbabilityPercent": 0.092421,
       "textureKey": "pinene_myco_nf_016",
-      "texturePath": "textures/items/nether_fungi/nf_016",
+      "texturePath": "textures/items/mycology/nether/nf_016",
       "useMode": "eat",
-      "realWorldStatus": "specimen",
       "food": {
-        "nutrition": 0,
-        "saturationModifier": 0.1,
-        "alwaysEat": true,
-        "useSeconds": 1.6
+        "nutrition": 1,
+        "saturationModifier": 0.1
       },
-      "cooldownSeconds": 4,
       "effects": [
         {
           "effect": "wither",
@@ -676,15 +606,14 @@
           "seconds": 1200
         }
       ],
-      "special": null,
       "lethal": {
         "chance": 1,
-        "delaySeconds": 600,
-        "deathMessages": [
-          "{name} の折り畳みは元に戻らなかった"
-        ]
+        "delaySeconds": 600
       },
-      "isNetherFungus": true
+      "scienceJa": "異常構造タンパク質が正常PrPの折り畳み異常を誘導し、致死性神経変性疾患に関係する。",
+      "gameExplanationJa": "食用すると長時間の強いデバフを受ける。牛乳で通常効果とPine Mycologyの致死タイマーを解除できる。",
+      "jokeJa": "牛乳を持たずに試食する勇気だけは認める。",
+      "source": "nether"
     },
     {
       "id": "NF-017",
@@ -693,19 +622,17 @@
       "itemId": "pinene:nf_017",
       "nameJa": "エボラウイルス茸",
       "scientificName": "Ebola virus",
+      "classification": "フィロウイルス",
       "rarity": 10,
       "drawWeight": 1,
+      "drawProbabilityPercent": 0.092421,
       "textureKey": "pinene_myco_nf_017",
-      "texturePath": "textures/items/nether_fungi/nf_017",
+      "texturePath": "textures/items/mycology/nether/nf_017",
       "useMode": "eat",
-      "realWorldStatus": "specimen",
       "food": {
-        "nutrition": 0,
-        "saturationModifier": 0.1,
-        "alwaysEat": true,
-        "useSeconds": 1.6
+        "nutrition": 1,
+        "saturationModifier": 0.1
       },
-      "cooldownSeconds": 4,
       "effects": [
         {
           "effect": "wither",
@@ -718,15 +645,14 @@
           "seconds": 600
         }
       ],
-      "special": null,
       "lethal": {
         "chance": 0.6,
-        "delaySeconds": 360,
-        "deathMessages": [
-          "{name} に必要だったのは勇気ではなく牛乳だった"
-        ]
+        "delaySeconds": 360
       },
-      "isNetherFungus": true
+      "scienceJa": "重篤な全身性疾患を起こすRNAウイルス。",
+      "gameExplanationJa": "食用すると長時間の強いデバフを受ける。牛乳で通常効果とPine Mycologyの致死タイマーを解除できる。",
+      "jokeJa": "牛乳を持たずに試食する勇気だけは認める。",
+      "source": "nether"
     },
     {
       "id": "NF-018",
@@ -735,19 +661,17 @@
       "itemId": "pinene:nf_018",
       "nameJa": "マールブルグウイルス茸",
       "scientificName": "Marburg virus",
+      "classification": "フィロウイルス",
       "rarity": 10,
       "drawWeight": 1,
+      "drawProbabilityPercent": 0.092421,
       "textureKey": "pinene_myco_nf_018",
-      "texturePath": "textures/items/nether_fungi/nf_018",
+      "texturePath": "textures/items/mycology/nether/nf_018",
       "useMode": "eat",
-      "realWorldStatus": "specimen",
       "food": {
-        "nutrition": 0,
-        "saturationModifier": 0.1,
-        "alwaysEat": true,
-        "useSeconds": 1.6
+        "nutrition": 1,
+        "saturationModifier": 0.1
       },
-      "cooldownSeconds": 4,
       "effects": [
         {
           "effect": "wither",
@@ -760,15 +684,14 @@
           "seconds": 480
         }
       ],
-      "special": null,
       "lethal": {
         "chance": 0.7,
-        "delaySeconds": 240,
-        "deathMessages": [
-          "{name} はマールブルグ菌茸に耐えられなかった"
-        ]
+        "delaySeconds": 240
       },
-      "isNetherFungus": true
+      "scienceJa": "エボラに近縁で、重篤な出血熱を起こす。",
+      "gameExplanationJa": "食用すると長時間の強いデバフを受ける。牛乳で通常効果とPine Mycologyの致死タイマーを解除できる。",
+      "jokeJa": "牛乳を持たずに試食する勇気だけは認める。",
+      "source": "nether"
     },
     {
       "id": "NF-019",
@@ -777,19 +700,17 @@
       "itemId": "pinene:nf_019",
       "nameJa": "ニパウイルス茸",
       "scientificName": "Nipah virus",
+      "classification": "パラミクソウイルス",
       "rarity": 10,
       "drawWeight": 1,
+      "drawProbabilityPercent": 0.092421,
       "textureKey": "pinene_myco_nf_019",
-      "texturePath": "textures/items/nether_fungi/nf_019",
+      "texturePath": "textures/items/mycology/nether/nf_019",
       "useMode": "eat",
-      "realWorldStatus": "specimen",
       "food": {
-        "nutrition": 0,
-        "saturationModifier": 0.1,
-        "alwaysEat": true,
-        "useSeconds": 1.6
+        "nutrition": 1,
+        "saturationModifier": 0.1
       },
-      "cooldownSeconds": 4,
       "effects": [
         {
           "effect": "blindness",
@@ -807,15 +728,14 @@
           "seconds": 720
         }
       ],
-      "special": null,
       "lethal": {
         "chance": 0.5,
-        "delaySeconds": 420,
-        "deathMessages": [
-          "{name} の意識は戻らなかった"
-        ]
+        "delaySeconds": 420
       },
-      "isNetherFungus": true
+      "scienceJa": "オオコウモリ類を自然宿主とする人獣共通感染症ウイルスで、脳炎などを起こす。",
+      "gameExplanationJa": "食用すると長時間の強いデバフを受ける。牛乳で通常効果とPine Mycologyの致死タイマーを解除できる。",
+      "jokeJa": "牛乳を持たずに試食する勇気だけは認める。",
+      "source": "nether"
     },
     {
       "id": "NF-020",
@@ -824,19 +744,17 @@
       "itemId": "pinene:nf_020",
       "nameJa": "炭疽菌茸",
       "scientificName": "Bacillus anthracis",
+      "classification": "細菌・芽胞形成菌",
       "rarity": 9,
       "drawWeight": 3,
+      "drawProbabilityPercent": 0.277264,
       "textureKey": "pinene_myco_nf_020",
-      "texturePath": "textures/items/nether_fungi/nf_020",
+      "texturePath": "textures/items/mycology/nether/nf_020",
       "useMode": "eat",
-      "realWorldStatus": "specimen",
       "food": {
-        "nutrition": 0,
-        "saturationModifier": 0.1,
-        "alwaysEat": true,
-        "useSeconds": 1.6
+        "nutrition": 1,
+        "saturationModifier": 0.1
       },
-      "cooldownSeconds": 4,
       "effects": [
         {
           "effect": "poison",
@@ -849,15 +767,14 @@
           "seconds": 600
         }
       ],
-      "special": null,
       "lethal": {
         "chance": 0.4,
-        "delaySeconds": 360,
-        "deathMessages": [
-          "{name} は炭疽菌茸を消化できなかった"
-        ]
+        "delaySeconds": 360
       },
-      "isNetherFungus": true
+      "scienceJa": "丈夫な芽胞を作り、皮膚・肺・消化管などの炭疽を起こす。",
+      "gameExplanationJa": "食用すると長時間の強いデバフを受ける。牛乳で通常効果とPine Mycologyの致死タイマーを解除できる。",
+      "jokeJa": "牛乳を持たずに試食する勇気だけは認める。",
+      "source": "nether"
     }
   ]
 }
