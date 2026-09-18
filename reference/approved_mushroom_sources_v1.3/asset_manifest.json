@@ -1,0 +1,72 @@
+[
+  {
+    "id": "B16",
+    "name_ja": "ドクツルタケ",
+    "file": "textures_32x32/b16_dokutsurutake.png",
+    "preview": "previews_512/b16_dokutsurutake.png",
+    "source_filename": "白いタマゴテングタケのドット絵.png",
+    "source_dimensions": [
+      1254,
+      1254
+    ],
+    "method": "resampled existing individual candidate; not a new generation",
+    "status": "visual review; not integrated into Codex pack",
+    "texture_bytes": 810
+  },
+  {
+    "id": "B17",
+    "name_ja": "アミガサタケ",
+    "file": "textures_32x32/b17_amigasatake.png",
+    "preview": "previews_512/b17_amigasatake.png",
+    "source_filename": "ドット絵のアミガサタケ.png",
+    "source_dimensions": [
+      1254,
+      1254
+    ],
+    "method": "resampled existing individual candidate; not a new generation",
+    "status": "visual review; not integrated into Codex pack",
+    "texture_bytes": 1005
+  },
+  {
+    "id": "B18",
+    "name_ja": "キヌガサタケ",
+    "file": "textures_32x32/b18_kinugasatake.png",
+    "preview": "previews_512/b18_kinugasatake.png",
+    "source_filename": "網傘茸のドット絵スプライト.png",
+    "source_dimensions": [
+      1254,
+      1254
+    ],
+    "method": "resampled existing individual candidate; not a new generation",
+    "status": "visual review; not integrated into Codex pack",
+    "texture_bytes": 1059
+  },
+  {
+    "id": "B19",
+    "name_ja": "クサウラベニタケ",
+    "file": "textures_32x32/b19_kusaurabenitake.png",
+    "preview": "previews_512/b19_kusaurabenitake.png",
+    "source_filename": "ピクセルアートの野生キノコ.png",
+    "source_dimensions": [
+      1254,
+      1254
+    ],
+    "method": "resampled existing individual candidate; not a new generation",
+    "status": "visual review; not integrated into Codex pack",
+    "texture_bytes": 1178
+  },
+  {
+    "id": "B20",
+    "name_ja": "ウラベニホテイシメジ",
+    "file": "textures_32x32/b20_urabenihoteishimeji.png",
+    "preview": "previews_512/b20_urabenihoteishimeji.png",
+    "source_filename": "ピンク色のひだを持つ森のキノコ.png",
+    "source_dimensions": [
+      1254,
+      1254
+    ],
+    "method": "resampled existing individual candidate; not a new generation",
+    "status": "visual review; not integrated into Codex pack",
+    "texture_bytes": 1430
+  }
+]
