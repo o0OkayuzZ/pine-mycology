@@ -7,6 +7,7 @@ sync_icons()
 from PIL import Image,ImageDraw
 ROOT=Path(__file__).resolve().parents[1];BP=ROOT/'pack/BP';RP=ROOT/'pack/RP'
 D=json.loads((ROOT/'data/mushrooms.json').read_text(encoding='utf8')); E=D['mushrooms'];S=json.loads((ROOT/'data/sources.json').read_text())
+NF_DATA=json.loads((ROOT/'data/nether_fungi.json').read_text(encoding='utf8')); NF=NF_DATA['entries']
 def jsave(p,o):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(o,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
 def uid(s):return str(uuid.uuid5(uuid.NAMESPACE_URL,'pine-mycology-v1/'+s))
 for side in ['BP','RP']:
@@ -30,6 +31,31 @@ for e in E:
  elif e['useMode']=='crush':c.update({'minecraft:use_modifiers':{'use_duration':0.1,'movement_modifier':1.0},'pinene:myco_crush':{}})
  jsave(BP/f'items/mycology/{k}.json',{'format_version':'1.21.90','minecraft:item':{'description':{'identifier':e['itemId'],'menu_category':{'category':'items'}},'components':c}})
  texdata[e['textureKey']]={'textures':e['texturePath']}
+# Nether fungi are canonical data too. Keep the classic registry stable and generate a separate registry.
+for e in NF:
+ stem=f"myco.{e['id'].lower()}"
+ for field,suf in [('nameJa','name'),('scienceJa','science'),('gameExplanationJa','game'),('jokeJa','joke')]:lang[f'{stem}.{suf}']=e[field]
+ lang[f'item.{e["itemId"]}.name']=e['nameJa']
+ c={'minecraft:display_name':{'value':f'{stem}.name'},'minecraft:icon':{'textures':{'default':e['textureKey']}},'minecraft:max_stack_size':64,
+    'minecraft:cooldown':{'category':'pinene_mushroom','duration':4},
+    'minecraft:food':{'nutrition':e['food']['nutrition'],'saturation_modifier':e['food']['saturationModifier'],'can_always_eat':True},
+    'minecraft:use_modifiers':{'use_duration':1.6,'movement_modifier':0.35},'minecraft:use_animation':'eat','pinene:myco_consume':{}}
+ item_file=e['itemId'].split(':',1)[1]+'.json'
+ jsave(BP/f'items/mycology/nether/{item_file}',{'format_version':'1.21.90','minecraft:item':{'description':{'identifier':e['itemId'],'menu_category':{'category':'items'}},'components':c}})
+ texdata[e['textureKey']]={'textures':e['texturePath']}
+(BP/'scripts/mycology/nether_registry.js').write_text('// Generated from data/nether_fungi.json.\\nexport const NETHER_FUNGI = '+json.dumps(NF,ensure_ascii=False,separators=(',',':'))+';\\nexport const NF_BY_ID = new Map(NETHER_FUNGI.map(x=>[x.id,x]));\\nexport const NF_BY_ITEM = new Map(NETHER_FUNGI.map(x=>[x.itemId,x]));\\n',encoding='utf8')
+(BP/'scripts/mycology/catalog.js').write_text("""import { MUSHROOMS } from './registry.js';
+import { NETHER_FUNGI } from './nether_registry.js';
+export const ALL_FUNGI=[...MUSHROOMS,...NETHER_FUNGI];
+export const ALL_BY_ID=new Map(ALL_FUNGI.map(x=>[x.id,x]));
+export const ALL_BY_ITEM=new Map(ALL_FUNGI.map(x=>[x.itemId,x]));
+export const GROUPS=Object.freeze({
+ red:{inputItem:'minecraft:red_mushroom',label:'赤色キノコ',icon:'textures/items/mycology/r11'},
+ brown:{inputItem:'minecraft:brown_mushroom',label:'茶色キノコ',icon:'textures/items/mycology/b01'},
+ crimson:{inputItem:'minecraft:crimson_fungus',label:'深紅の菌茸',icon:'textures/items/mycology/nether/nf_001'},
+ warped:{inputItem:'minecraft:warped_fungus',label:'歪んだ菌茸',icon:'textures/items/mycology/nether/nf_005'}
+});
+""",encoding='utf8')
 jsave(RP/'textures/item_texture.json',{'resource_pack_name':'pinene_mycology','texture_name':'atlas.items','texture_data':texdata})
 jsave(RP/'texts/languages.json',['en_US','ja_JP'])
 for locale in ['ja_JP','en_US']:
@@ -48,8 +74,8 @@ for side in ['BP','RP']:
  im=Image.new('RGBA',(64,64),'#4a372a');base=Image.open(RP/'textures/items/mycology/r11.png').resize((48,48),Image.Resampling.NEAREST);im.alpha_composite(base,(8,8));im.save(ROOT/f'pack/{side}/pack_icon.png',optimize=True)
 # Debug functions deliberately create an administrative individual without natural loot eligibility.
 func=BP/'functions/mycology';func.mkdir(parents=True,exist_ok=True)
-(func/'give_test.mcfunction').write_text('give @s minecraft:red_mushroom 64\ngive @s minecraft:brown_mushroom 64\nsummon pinene:mushroom_appraiser ~3 ~ ~\n',encoding='utf8')
-(func/'give_catalog.mcfunction').write_text('\n'.join('give @s '+e['itemId']+' 1' for e in E)+'\n',encoding='utf8')
+(func/'give_test.mcfunction').write_text('give @s minecraft:red_mushroom 64\ngive @s minecraft:brown_mushroom 64\ngive @s minecraft:crimson_fungus 64\ngive @s minecraft:warped_fungus 64\nsummon pinene:mushroom_appraiser ~3 ~ ~\n',encoding='utf8')
+(func/'give_catalog.mcfunction').write_text('\n'.join('give @s '+e['itemId']+' 1' for e in [*E,*NF])+'\n',encoding='utf8')
 # Compact catalog page per specimen.
 status={'food_recorded':'食用として扱う資料あり（生食の安全を示さない）','toxic':'有毒','unknown':'不明／判断しない','conditional':'中毒報告あり・条件付き','inedible':'食料に不適'}
 lines=['# 菌類図鑑本文 v1.0.0','',D['warningJa'],'','**以下のジョークは架空の鑑定士の発言。科学解説ではない。**','']
@@ -62,6 +88,9 @@ with (ROOT/'data/probabilities.csv').open('w',encoding='utf-8-sig',newline='') a
  w=csv.writer(f);w.writerow(['id','name_ja','group','rarity','weight','group_weight_sum','probability_per_draw','mean_draws_per_hit'])
  for e in E:
   total=sum(2**(10-x['rarity']) for x in E if x['group']==e['group']);wt=2**(10-e['rarity'])
+  w.writerow([e['id'],e['nameJa'],e['group'],e['rarity'],wt,total,format(wt/total,'.12g'),format(total/wt,'.12g')])
+ for e in NF:
+  total=sum(x['drawWeight'] for x in NF if x['group']==e['group']);wt=e['drawWeight']
   w.writerow([e['id'],e['nameJa'],e['group'],e['rarity'],wt,total,format(wt/total,'.12g'),format(total/wt,'.12g')])
 print('Built item definitions, registry, localization, NPC BP, manifests, science codex')
 
