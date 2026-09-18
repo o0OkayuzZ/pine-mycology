@@ -1,12 +1,12 @@
 {
   "format_version": 2,
   "header": {
-    "name": "[TEST] Pinene Mycology BP 1.2.0-handoff",
-    "description": "Mushroom Appraiser / local validation candidate; do not deploy over production packs",
-    "uuid": "da9143c4-fe3c-5812-9010-7bb5de9d64f2",
+    "name": "Pine Mycology BP",
+    "description": "Standalone mushroom appraisal, encyclopedia, and Nether fungi addon",
+    "uuid": "4362def8-2fcf-51f9-ad58-f40b7a39b5d3",
     "version": [
       1,
-      2,
+      0,
       0
     ],
     "min_engine_version": [
@@ -18,10 +18,10 @@
   "modules": [
     {
       "type": "data",
-      "uuid": "8bb5793e-6a85-5287-9f17-dc7401a6803d",
+      "uuid": "ce188c8f-13f4-5d29-829d-b6765e92ea86",
       "version": [
         1,
-        2,
+        0,
         0
       ]
     },
@@ -29,26 +29,26 @@
       "type": "script",
       "language": "javascript",
       "entry": "scripts/main.js",
-      "uuid": "ed1cf3f6-f036-5e0c-9b59-56cc4a2fbcd7",
+      "uuid": "8dacf1ef-3596-5542-91ca-b29d0ddb5229",
       "version": [
         1,
-        2,
+        0,
         0
       ]
     }
   ],
   "metadata": {
     "authors": [
-      "Pinene / AI-assisted production"
+      "Pine Mycology / AI-assisted production"
     ],
     "product_type": "addon"
   },
   "dependencies": [
     {
-      "uuid": "135f09b3-c7b3-5236-bc2b-b0e710fda3e7",
+      "uuid": "d4dbb30e-e0b4-5c3a-98df-fd7d9465602f",
       "version": [
         1,
-        2,
+        0,
         0
       ]
     },
