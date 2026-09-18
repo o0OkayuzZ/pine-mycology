@@ -1,5 +1,5 @@
 import { ActionFormData } from '@minecraft/server-ui';
-import { MUSHROOMS,BY_ID } from './registry.js';
+import { ALL_FUNGI,ALL_ALL_BY_ID,GROUPS } from './catalog.js';
 import { counts,seen } from './progress.js';
 import { appraise,owned,recoverDelivery } from './appraisal.js';
 import { requireUsable,canUse } from './npc.js';
@@ -9,6 +9,9 @@ import { revealAppraisal,revealPreferences,cycleRevealMode,toggleRevealSound } f
 import { entityById,tell,logError,tr } from './util.js';
 
 function label(d,suffix){return tr(`myco.${d.id.toLowerCase()}.${suffix}`);}
+const GROUP_ORDER=['red','brown','crimson','warped'];
+const GROUP_COLOR={red:'§c',brown:'§6',crimson:'§4',warped:'§b'};
+function groupLabel(group){return `${GROUP_COLOR[group]??'§f'}${GROUPS[group].label}§r`;}
 
 function effectsText(d){
   const names={
@@ -62,71 +65,40 @@ export async function encyclopedia(player){
     const c=counts(player);
     const form=new ActionFormData()
       .title(tr('myco.title'))
-      .body({
-        rawtext:[
-          {text:
-            `発見 §f${c.total}§7/${MUSHROOMS.length}§r\n`+
-            `${progressBar(c.total,MUSHROOMS.length)}\n\n`
-          },
-          tr('myco.warning')
-        ]
-      })
-      .button(
-        `§c赤色キノコ§r ${c.red}/${MUSHROOMS.filter(x=>x.group==='red').length}`,
-        'textures/items/mycology/r11'
-      )
-      .button(
-        `§6茶色キノコ§r ${c.brown}/${MUSHROOMS.filter(x=>x.group==='brown').length}`,
-        'textures/items/mycology/b01'
-      )
-      .button('戻る');
-
+      .body({rawtext:[
+        {text:`発見 §f${c.total}§7/${ALL_FUNGI.length}§r\n${progressBar(c.total,ALL_FUNGI.length)}\n\n`},
+        tr('myco.warning')
+      ]});
+    for(const group of GROUP_ORDER){
+      const defs=ALL_FUNGI.filter(x=>x.group===group);
+      form.button(`${groupLabel(group)} ${c[group]??0}/${defs.length}`,GROUPS[group].icon);
+    }
+    form.button('戻る');
     const result=await form.show(player);
-    if(result.canceled||result.selection===2)return;
-
-    const group=result.selection===0?'red':'brown';
+    if(result.canceled||result.selection===GROUP_ORDER.length)return;
+    const group=GROUP_ORDER[result.selection];
     let page=0;
-    const defs=MUSHROOMS.filter(x=>x.group===group);
-    const pages=Math.ceil(defs.length/10);
-
+    const defs=ALL_FUNGI.filter(x=>x.group===group);
+    const pages=Math.max(1,Math.ceil(defs.length/10));
     while(true){
-      const entries=defs.slice(page*10,page*10+10);
-      const actions=[];
-      const list=new ActionFormData()
-        .title(`${group==='red'?'§c赤色§r':'§6茶色§r'}キノコ ${page+1}/${pages}`);
-
+      const entries=defs.slice(page*10,page*10+10),actions=[];
+      const list=new ActionFormData().title(`${groupLabel(group)} ${page+1}/${pages}`);
       for(const d of entries){
         const known=seen(player,d);
-        list.button(
-          known
-            ? `${coloredSpecies(d)}\n${stars(d.rarity)}`
-            : `§8${d.id} ？？？？？§r`,
-          known?d.texturePath:'textures/ui/mycology/unknown'
-        );
+        list.button(known?`${coloredSpecies(d)}\n${stars(d.rarity)}`:`§8${d.id} ？？？？？§r`,known?d.texturePath:'textures/ui/mycology/unknown');
         actions.push(known?d.id:'unknown');
       }
-
-      if(page>0){
-        list.button('前のページ');
-        actions.push('prev');
-      }
-      if(page+1<pages){
-        list.button('次のページ');
-        actions.push('next');
-      }
-      list.button('図鑑トップ');
-      actions.push('back');
-
+      if(page>0){list.button('前のページ');actions.push('prev');}
+      if(page+1<pages){list.button('次のページ');actions.push('next');}
+      list.button('図鑑トップ');actions.push('back');
       const r=await list.show(player);
       if(r.canceled)break;
-
-      const a=actions[r.selection];
-      if(a==='back')break;
-      if(a==='prev'){page--;continue;}
-      if(a==='next'){page++;continue;}
-      if(a==='unknown')continue;
-
-      const d=BY_ID.get(a);
+      const action=actions[r.selection];
+      if(action==='back')break;
+      if(action==='prev'){page--;continue;}
+      if(action==='next'){page++;continue;}
+      if(action==='unknown')continue;
+      const d=ALL_BY_ID.get(action);
       if(d&&seen(player,d))await detail(player,d);
     }
   }
@@ -149,9 +121,9 @@ async function batchLoop(player,npcId,group){
     );
 
     const sorted=[...b.results].sort(
-      (a,b)=>BY_ID.get(b.id).rarity-BY_ID.get(a.id).rarity||a.id.localeCompare(b.id)
+      (a,b)=>ALL_BY_ID.get(b.id).rarity-ALL_BY_ID.get(a.id).rarity||a.id.localeCompare(b.id)
     );
-    const top=BY_ID.get(sorted[0].id);
+    const top=ALL_BY_ID.get(sorted[0].id);
     const c=counts(player);
     const beforeTotal=Math.max(0,c.total-b.fresh.length);
 
@@ -169,13 +141,13 @@ async function batchLoop(player,npcId,group){
 
     summary.push(`最高レア：${rarityColor(top.rarity)}★${top.rarity} ${rarityTier(top.rarity)}§r`);
     summary.push(`新規発見：${b.fresh.length?`§e§l${b.fresh.length}種§r`:'0種'}`);
-    summary.push(`図鑑：${beforeTotal} → §a${c.total}§r / ${MUSHROOMS.length}`);
-    summary.push(progressBar(c.total,MUSHROOMS.length));
+    summary.push(`図鑑：${beforeTotal} → §a${c.total}§r / ${ALL_FUNGI.length}`);
+    summary.push(progressBar(c.total,ALL_FUNGI.length));
     summary.push('');
     summary.push('§8──────── 鑑定内訳 ────────§r');
 
     for(const r of sorted){
-      const d=BY_ID.get(r.id);
+      const d=ALL_BY_ID.get(r.id);
       const isFresh=b.fresh.includes(r.id);
       summary.push(
         `${isFresh?'§e§lNEW!§r ':''}`+
@@ -223,75 +195,47 @@ async function batchLoop(player,npcId,group){
 }
 
 function appraisalButton(group,info){
-  const amount=info.first?.amount??0;
-  const total=info.total;
-  const isRed=group==='red';
-
-  if(amount===64){
-    return isRed
-      ? `§c§l🔥 赤キノコ MAX STACK 🔥§r\n64連鑑定 / 所持 ${total}`
-      : `§6§l🔥 茶キノコ MAX STACK 🔥§r\n64連鑑定 / 所持 ${total}`;
-  }
-
-  return isRed
-    ? `§c赤色キノコを${amount}連鑑定§r\n今回 ${amount} / 合計 ${total}`
-    : `§6茶色キノコを${amount}連鑑定§r\n今回 ${amount} / 合計 ${total}`;
+  const amount=info.first?.amount??0,total=info.total,label=GROUPS[group].label,color=GROUP_COLOR[group]??'§f';
+  if(amount===64)return `${color}§l🔥 ${label} MAX STACK 🔥§r\n64連鑑定 / 所持 ${total}`;
+  return `${color}${label}を${amount}連鑑定§r\n今回 ${amount} / 合計 ${total}`;
 }
 
 export async function openAppraiser(player,npc){
   if(sessions.has(player.id)||!canUse(player,npc,false))return;
   const session={npcId:npc.id,openedAt:Date.now()};
   sessions.set(player.id,session);
-
   try{
     recoverDelivery(player);
-
     while(true){
       requireUsable(player,entityById(npc.id),true);
-
-      const red=owned(player,'red');
-      const brown=owned(player,'brown');
-      const c=counts(player);
-
-      const prefs=revealPreferences(player);
-      const result=await new ActionFormData()
+      const ownedByGroup=Object.fromEntries(GROUP_ORDER.map(g=>[g,owned(player,g)]));
+      const c=counts(player),prefs=revealPreferences(player);
+      const form=new ActionFormData()
         .title('§2§lキノコ鑑定士§r')
         .body(
-          `図鑑 §a${c.total}§r/${MUSHROOMS.length}\n`+
-          `${progressBar(c.total,MUSHROOMS.length)}\n\n`+
+          `図鑑 §a${c.total}§r/${ALL_FUNGI.length}\n`+
+          `${progressBar(c.total,ALL_FUNGI.length)}\n\n`+
           '最初の該当スタックを全量鑑定します。\n'+
-          '別スロットのキノコは合算しません。\n'+
+          '別スロットの菌類は合算しません。\n'+
           '鑑定料：§aなし§r'
-        )
-        .button(
-          appraisalButton('red',red),
-          'textures/items/mycology/r11'
-        )
-        .button(
-          appraisalButton('brown',brown),
-          'textures/items/mycology/b01'
-        )
-        .button('§aキノコ図鑑§r','textures/ui/mycology/unknown')
-        .button('閉じる')
-        .button(`演出：${{full:'じっくり',quick:'短縮',off:'OFF'}[prefs.mode]}\n押して切替 / しゃがみでスキップ`)
-        .button(`サウンド：${prefs.sound?'ON':'OFF'}\n鑑定した自分だけに再生`)
-        .show(player);
-
-      if(result.canceled||result.selection===3)return;
-
-      if(result.selection===4){cycleRevealMode(player);continue;}
-      if(result.selection===5){toggleRevealSound(player);continue;}
-
-      if(result.selection===2){
-        await encyclopedia(player);
-        continue;
+        );
+      const actions=[];
+      for(const group of GROUP_ORDER){
+        form.button(appraisalButton(group,ownedByGroup[group]),GROUPS[group].icon);
+        actions.push({kind:'appraise',group});
       }
-
-      const outcome=await batchLoop(
-        player,
-        npc.id,
-        result.selection===0?'red':'brown'
-      );
+      form.button('§a菌類図鑑§r','textures/ui/mycology/unknown');actions.push({kind:'encyclopedia'});
+      form.button('閉じる');actions.push({kind:'close'});
+      form.button(`演出：${{full:'じっくり',quick:'短縮',off:'OFF'}[prefs.mode]}\n押して切替 / しゃがみでスキップ`);actions.push({kind:'mode'});
+      form.button(`サウンド：${prefs.sound?'ON':'OFF'}\n鑑定した自分だけに再生`);actions.push({kind:'sound'});
+      const result=await form.show(player);
+      if(result.canceled)return;
+      const action=actions[result.selection];
+      if(!action||action.kind==='close')return;
+      if(action.kind==='mode'){cycleRevealMode(player);continue;}
+      if(action.kind==='sound'){toggleRevealSound(player);continue;}
+      if(action.kind==='encyclopedia'){await encyclopedia(player);continue;}
+      const outcome=await batchLoop(player,npc.id,action.group);
       if(outcome==='aborted')return;
     }
   }catch(error){
