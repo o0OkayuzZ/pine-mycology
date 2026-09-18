@@ -69,6 +69,10 @@
             "interact_text": "action.interact.trade"
           }
         ]
+      },
+      "minecraft:nameable": {
+        "always_show": false,
+        "allow_name_tag_renaming": true
       }
     },
     "events": {
