@@ -7,10 +7,24 @@ function lease(){return readJSON(world,CONFIG.leaseKey,null);}
 function saveLease(value){writeJSON(world,CONFIG.leaseKey,value??undefined);}
 function token(entity){return entity.getDynamicProperty(CONFIG.naturalTokenKey);}
 function activeMatches(entity,l){return !!l&&l.entityId===entity.id&&l.token===token(entity);}
+function named(entity){return typeof entity.nameTag==='string'&&entity.nameTag.trim().length>0;}
+function clearExpiryTimer(){if(expiryTimer!==undefined){system.clearRun(expiryTimer);expiryTimer=undefined;}}
+function clearNaturalToken(entity){
+ try{entity.setDynamicProperty(CONFIG.naturalTokenKey,undefined);}
+ catch{try{entity.setDynamicProperty(CONFIG.naturalTokenKey,'');}catch{}}
+}
+function settle(entity){
+ if(!validEntity(entity)||entity.typeId!==CONFIG.npcType||!token(entity))return false;
+ const l=lease();
+ if(activeMatches(entity,l)){clearExpiryTimer();saveLease(null);}
+ clearNaturalToken(entity);
+ return true;
+}
 function retire(entity){if(validEntity(entity))entity.remove();} // Not kill(): retirement never triggers death loot.
 function closeLease(l){
- if(expiryTimer!==undefined){system.clearRun(expiryTimer);expiryTimer=undefined;}
+ clearExpiryTimer();
  const old=entityById(l.entityId);
+ if(validEntity(old)&&named(old)&&activeMatches(old,l)){settle(old);return;}
  if(validEntity(old))retire(old);
  saveLease(null);
 }
@@ -33,6 +47,8 @@ function checkExpiry(){
  expiryTimer=undefined;
  try{
   const l=lease();if(!l)return;
+  const old=entityById(l.entityId);
+  if(validEntity(old)&&activeMatches(old,l)&&named(old)){settle(old);return;}
   const now=Date.now();
   if(now<l.expiresAt){armExpiry(l);return;}
   if(now<l.expiresAt+CONFIG.maxGraceMs&&hasNpcSession(l.entityId)) {
@@ -44,6 +60,7 @@ function checkExpiry(){
 }
 function reconcileLoaded(entity){
  if(entity.typeId!==CONFIG.npcType||!token(entity))return;
+ if(named(entity)){settle(entity);return;}
  const l=lease();
  if(!activeMatches(entity,l)){retire(entity);return;}
  if(Date.now()>=l.expiresAt && !hasNpcSession(entity.id)){closeLease(l);return;}
@@ -124,18 +141,26 @@ export function initializeNpc(){
 }
 export function installNpc(){
  world.afterEvents.entityLoad.subscribe(e=>{try{reconcileLoaded(e.entity);}catch(error){logError('entity load',error);}});
+ world.afterEvents.playerInteractWithEntity.subscribe(e=>{
+  const npc=e.target;
+  if(npc.typeId!==CONFIG.npcType||e.beforeItemStack?.typeId!=='minecraft:name_tag')return;
+  try{if(named(npc)&&token(npc))settle(npc);}catch(error){logError('settle named NPC',error);}
+ });
  world.afterEvents.entityDie.subscribe(e=>{
   const npc=e.deadEntity;if(npc.typeId!==CONFIG.npcType)return;
   try{
    const l=lease();
    if(!activeMatches(npc,l))return;
+   if(named(npc)){clearExpiryTimer();saveLease(null);return;}
    // An expired stale NPC cannot be farmed after unload/reload.
    if(Date.now()>=l.expiresAt+CONFIG.maxGraceMs){saveLease(null);return;}
    saveLease(null);
-   if(expiryTimer!==undefined){system.clearRun(expiryTimer);expiryTimer=undefined;}
+   clearExpiryTimer();
    const location=npc.location,dim=npc.dimension;
    dim.spawnItem(new ItemStack('minecraft:red_mushroom',64),location);
    dim.spawnItem(new ItemStack('minecraft:brown_mushroom',64),location);
+   dim.spawnItem(new ItemStack('minecraft:crimson_fungus',64),location);
+   dim.spawnItem(new ItemStack('minecraft:warped_fungus',64),location);
   }catch(error){logError('natural death loot',error);}
  });
  world.afterEvents.playerLeave.subscribe(e=>sessions.delete(e.playerId));
