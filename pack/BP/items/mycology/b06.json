@@ -1,0 +1,31 @@
+{
+  "format_version": "1.21.90",
+  "minecraft:item": {
+    "description": {
+      "identifier": "pinene:b_mushroom_b06",
+      "menu_category": {
+        "category": "items"
+      }
+    },
+    "components": {
+      "minecraft:display_name": {
+        "value": "myco.b06.name"
+      },
+      "minecraft:icon": {
+        "textures": {
+          "default": "pinene_myco_b06"
+        }
+      },
+      "minecraft:max_stack_size": 64,
+      "minecraft:cooldown": {
+        "category": "pinene_mushroom",
+        "duration": 4
+      },
+      "minecraft:use_modifiers": {
+        "use_duration": 0.1,
+        "movement_modifier": 1.0
+      },
+      "pinene:myco_crush": {}
+    }
+  }
+}
