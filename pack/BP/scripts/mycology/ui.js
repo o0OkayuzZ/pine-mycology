@@ -1,5 +1,5 @@
 import { ActionFormData } from '@minecraft/server-ui';
-import { ALL_FUNGI,ALL_ALL_BY_ID,GROUPS } from './catalog.js';
+import { ALL_FUNGI,ALL_BY_ID,GROUPS } from './catalog.js';
 import { counts,seen } from './progress.js';
 import { appraise,owned,recoverDelivery } from './appraisal.js';
 import { requireUsable,canUse } from './npc.js';
