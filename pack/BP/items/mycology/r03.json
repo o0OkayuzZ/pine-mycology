@@ -1,0 +1,37 @@
+{
+  "format_version": "1.21.90",
+  "minecraft:item": {
+    "description": {
+      "identifier": "pinene:r_mushroom_r03",
+      "menu_category": {
+        "category": "items"
+      }
+    },
+    "components": {
+      "minecraft:display_name": {
+        "value": "myco.r03.name"
+      },
+      "minecraft:icon": {
+        "textures": {
+          "default": "pinene_myco_r03"
+        }
+      },
+      "minecraft:max_stack_size": 64,
+      "minecraft:cooldown": {
+        "category": "pinene_mushroom",
+        "duration": 4
+      },
+      "minecraft:food": {
+        "nutrition": 1,
+        "saturation_modifier": 0.1,
+        "can_always_eat": true
+      },
+      "minecraft:use_modifiers": {
+        "use_duration": 1.6,
+        "movement_modifier": 0.35
+      },
+      "minecraft:use_animation": "eat",
+      "pinene:myco_consume": {}
+    }
+  }
+}
