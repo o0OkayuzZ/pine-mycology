@@ -11,6 +11,7 @@ installEffects();
 installNpc();
 world.afterEvents.playerInteractWithEntity.subscribe(e=>{
  if(e.target.typeId!==CONFIG.npcType)return;
+ if(e.beforeItemStack?.typeId==='minecraft:name_tag')return;
  system.run(()=>{void openAppraiser(e.player,e.target);});
 });
 world.afterEvents.worldLoad.subscribe(()=>{
