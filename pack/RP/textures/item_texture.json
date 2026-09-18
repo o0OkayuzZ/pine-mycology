@@ -1,0 +1,114 @@
+{
+  "resource_pack_name": "pinene_mycology",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "pinene_myco_r01": {
+      "textures": "textures/items/mycology/r01"
+    },
+    "pinene_myco_r02": {
+      "textures": "textures/items/mycology/r02"
+    },
+    "pinene_myco_r03": {
+      "textures": "textures/items/mycology/r03"
+    },
+    "pinene_myco_r04": {
+      "textures": "textures/items/mycology/r04"
+    },
+    "pinene_myco_r05": {
+      "textures": "textures/items/mycology/r05"
+    },
+    "pinene_myco_r06": {
+      "textures": "textures/items/mycology/r06"
+    },
+    "pinene_myco_r07": {
+      "textures": "textures/items/mycology/r07"
+    },
+    "pinene_myco_r08": {
+      "textures": "textures/items/mycology/r08"
+    },
+    "pinene_myco_r09": {
+      "textures": "textures/items/mycology/r09"
+    },
+    "pinene_myco_r10": {
+      "textures": "textures/items/mycology/r10"
+    },
+    "pinene_myco_r11": {
+      "textures": "textures/items/mycology/r11"
+    },
+    "pinene_myco_r12": {
+      "textures": "textures/items/mycology/r12"
+    },
+    "pinene_myco_r13": {
+      "textures": "textures/items/mycology/r13"
+    },
+    "pinene_myco_r14": {
+      "textures": "textures/items/mycology/r14"
+    },
+    "pinene_myco_r15": {
+      "textures": "textures/items/mycology/r15"
+    },
+    "pinene_myco_b01": {
+      "textures": "textures/items/mycology/b01"
+    },
+    "pinene_myco_b02": {
+      "textures": "textures/items/mycology/b02"
+    },
+    "pinene_myco_b03": {
+      "textures": "textures/items/mycology/b03"
+    },
+    "pinene_myco_b04": {
+      "textures": "textures/items/mycology/b04"
+    },
+    "pinene_myco_b05": {
+      "textures": "textures/items/mycology/b05"
+    },
+    "pinene_myco_b06": {
+      "textures": "textures/items/mycology/b06"
+    },
+    "pinene_myco_b07": {
+      "textures": "textures/items/mycology/b07"
+    },
+    "pinene_myco_b08": {
+      "textures": "textures/items/mycology/b08"
+    },
+    "pinene_myco_b09": {
+      "textures": "textures/items/mycology/b09"
+    },
+    "pinene_myco_b10": {
+      "textures": "textures/items/mycology/b10"
+    },
+    "pinene_myco_b11": {
+      "textures": "textures/items/mycology/b11"
+    },
+    "pinene_myco_b12": {
+      "textures": "textures/items/mycology/b12"
+    },
+    "pinene_myco_b13": {
+      "textures": "textures/items/mycology/b13"
+    },
+    "pinene_myco_b14": {
+      "textures": "textures/items/mycology/b14"
+    },
+    "pinene_myco_b15": {
+      "textures": "textures/items/mycology/b15"
+    },
+    "pinene_myco_b16": {
+      "textures": "textures/items/mycology/b16"
+    },
+    "pinene_myco_b17": {
+      "textures": "textures/items/mycology/b17"
+    },
+    "pinene_myco_b18": {
+      "textures": "textures/items/mycology/b18"
+    },
+    "pinene_myco_b19": {
+      "textures": "textures/items/mycology/b19"
+    },
+    "pinene_myco_b20": {
+      "textures": "textures/items/mycology/b20"
+    },
+    "pinene_myco_field_guide": {
+      "textures": "textures/items/mycology_tools/field_guide"
+    }
+  }
+}
