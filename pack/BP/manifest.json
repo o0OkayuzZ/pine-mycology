@@ -1,0 +1,64 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "[TEST] Pinene Mycology BP 1.2.0-handoff",
+    "description": "Mushroom Appraiser / local validation candidate; do not deploy over production packs",
+    "uuid": "da9143c4-fe3c-5812-9010-7bb5de9d64f2",
+    "version": [
+      1,
+      2,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      90
+    ]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "8bb5793e-6a85-5287-9f17-dc7401a6803d",
+      "version": [
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "type": "script",
+      "language": "javascript",
+      "entry": "scripts/main.js",
+      "uuid": "ed1cf3f6-f036-5e0c-9b59-56cc4a2fbcd7",
+      "version": [
+        1,
+        2,
+        0
+      ]
+    }
+  ],
+  "metadata": {
+    "authors": [
+      "Pinene / AI-assisted production"
+    ],
+    "product_type": "addon"
+  },
+  "dependencies": [
+    {
+      "uuid": "135f09b3-c7b3-5236-bc2b-b0e710fda3e7",
+      "version": [
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.7.0"
+    },
+    {
+      "module_name": "@minecraft/server-ui",
+      "version": "2.0.0"
+    }
+  ]
+}
