@@ -1,0 +1,16 @@
+{
+  "name": "pinene-mycology-codex",
+  "version": "1.3.0-handoff",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/core.test.mjs && node --experimental-loader ./tests/mock-loader.mjs --test tests/adapters.test.mjs && node --experimental-loader ./tests/mock-loader.mjs --test tests/field-guide.test.mjs && node --experimental-loader ./tests/mock-loader.mjs --test tests/ui.test.mjs && node --experimental-loader ./tests/mock-loader.mjs --test tests/reveal.test.mjs",
+    "validate": "python tools/validate.py",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@minecraft/server": "2.7.0",
+    "@minecraft/server-ui": "2.0.0",
+    "typescript": "7.0.2"
+  }
+}
