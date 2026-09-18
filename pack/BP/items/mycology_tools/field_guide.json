@@ -1,0 +1,23 @@
+{
+  "format_version": "1.21.90",
+  "minecraft:item": {
+    "description": {
+      "identifier": "pinene:mushroom_field_guide",
+      "menu_category": {
+        "category": "items"
+      }
+    },
+    "components": {
+      "minecraft:display_name": {
+        "value": "myco.field_guide.name"
+      },
+      "minecraft:icon": {
+        "textures": {
+          "default": "pinene_myco_field_guide"
+        }
+      },
+      "minecraft:max_stack_size": 1,
+      "pinene:myco_field_guide": {}
+    }
+  }
+}
