@@ -1,0 +1,646 @@
+{
+  "release": "v1.4.0-images",
+  "scope": "selected individual originals + 32x32 conversion; no game-logic modifications",
+  "source_count": 35,
+  "runtime_count": 35,
+  "old_16x16_upscale_count": 0,
+  "runtime_reference_mismatch_count": 0,
+  "all_originals_preserved_byte_for_byte": true,
+  "game_runtime_tested": false,
+  "species_identification_scientifically_verified": false,
+  "records": [
+    {
+      "id": "R01",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 431,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "R02",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 262,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "R03",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 592,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "R04",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 369,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "R05",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 481,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "R06",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 354,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "R07",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 498,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "R08",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 258,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "R09",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 339,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "R10",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 379,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "R11",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 370,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "R12",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 496,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "R13",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 360,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "R14",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 388,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "R15",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 376,
+      "opaque_colors": 31,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "B01",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 535,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "B02",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 570,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "B03",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 532,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "B04",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 540,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "B05",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 372,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "B06",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 549,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "B07",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 519,
+      "opaque_colors": 31,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "B08",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 494,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "B09",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 563,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "B10",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 486,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "B11",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 466,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "B12",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 496,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "B13",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 364,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "B14",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 582,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "B15",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 419,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "B16",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 268,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "B17",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 266,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "B18",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 331,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "B19",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 362,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    },
+    {
+      "id": "B20",
+      "source_hash_verified": true,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "visible_pixels": 469,
+      "opaque_colors": 32,
+      "is_old_16x16_nearest_2x": false,
+      "is_identical_to_v1_3_runtime": false,
+      "runtime_reference_byte_equal": true
+    }
+  ],
+  "rebuild_reproduces_all_35_png_bytes": true,
+  "original_source_bytes": 17871835,
+  "runtime_texture_bytes": 51659
+}
