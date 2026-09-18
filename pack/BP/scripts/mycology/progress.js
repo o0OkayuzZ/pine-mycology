@@ -1,5 +1,5 @@
 import { bitAddress, validWord, hasBit, progressUpdates } from './core.js';
-import { MUSHROOMS } from './registry.js';
+import { ALL_FUNGI } from './catalog.js';
 const key=(group,word)=>`pinene:myco_seen_${group}_${word}`;
 export function readWord(player,group,word) {
  let value=player.getDynamicProperty(key(group,word));
@@ -17,13 +17,15 @@ export function readWord(player,group,word) {
 export function seen(player,d) {return hasBit(readWord(player,d.group,bitAddress(d.indexInGroup).word),d.indexInGroup);}
 export function registerDiscoveries(player,definitions) {
  const {updates,discovered}=progressUpdates(definitions,(g,w)=>readWord(player,g,w));
- // Once per touched word (currently at most one per batch), not once per draw.
  for (const [k,value] of updates) {const [g,w]=k.split(':');player.setDynamicProperty(key(g,Number(w)),value);}
- player.setDynamicProperty('pinene:myco_data_version',1);
+ player.setDynamicProperty('pinene:myco_data_version',2);
  return discovered;
 }
 export function counts(player) {
- const result={red:0,brown:0,total:0};
- for (const d of MUSHROOMS) if(seen(player,d)){result[d.group]++;result.total++;}
+ const result={total:0};
+ for (const d of ALL_FUNGI) {
+  if(result[d.group]===undefined)result[d.group]=0;
+  if(seen(player,d)){result[d.group]++;result.total++;}
+ }
  return result;
 }

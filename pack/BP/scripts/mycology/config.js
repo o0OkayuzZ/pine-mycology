@@ -19,6 +19,7 @@ export const CONFIG = Object.freeze({
   islandBiomeIds:['minecraft:mushroom_island','minecraft:mushroom_island_shore','mushroom_island','mushroom_island_shore'],
   islandBiomeTags:['mooshroom_island'],
   poisonQueueKey:'pinene:myco_poison_queue_v1',
+  nfLethalQueueKey:'pinene:myco_nf_lethal_queue_v1',
   receiptKey:'pinene:myco_appraisal_receipt_v1',
   researchPointsKey:'pinene:myco_research_points_v1',
   // Reserved points are not granted yet: research/cooking/potions remain out of scope.

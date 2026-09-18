@@ -1,13 +1,13 @@
 import { ItemStack } from '@minecraft/server';
 import { makeTable,rollBatch,selectFirstStack,planInventory } from './core.js';
-import { MUSHROOMS,BY_ID } from './registry.js';
+import { ALL_FUNGI,ALL_BY_ID,GROUPS } from './catalog.js';
 import { inventory,readJSON,writeJSON,logError } from './util.js';
 import { registerDiscoveries } from './progress.js';
 import { CONFIG } from './config.js';
-const tables={red:makeTable(MUSHROOMS.filter(x=>x.group==='red')),brown:makeTable(MUSHROOMS.filter(x=>x.group==='brown'))};
+const tables=Object.fromEntries(Object.keys(GROUPS).map(group=>[group,makeTable(ALL_FUNGI.filter(x=>x.group===group))]));
 const locks=new Set();
 export function owned(player,group) {
- const c=inventory(player),id=`minecraft:${group}_mushroom`;
+ const c=inventory(player),id=GROUPS[group]?.inputItem;
  const slots=Array.from({length:c.size},(_,i)=>c.getItem(i));
  return {total:slots.reduce((n,x)=>n+(x?.typeId===id?x.amount:0),0),first:selectFirstStack(slots,id)};
 }
@@ -16,7 +16,7 @@ function save(player,r) {writeJSON(player,CONFIG.receiptKey,r??undefined);}
 export function recoverDelivery(player) {
  const r=receipt(player);if(!r)return 0;
  if(r.stage!=='delivered' || r.inFlight) throw new Error('前回の鑑定記録に復旧確認が必要です。管理者へ連絡してください。追加の消費は行いません。');
- registerDiscoveries(player,r.results.map(x=>BY_ID.get(x.id)).filter(Boolean));
+ registerDiscoveries(player,r.results.map(x=>ALL_BY_ID.get(x.id)).filter(Boolean));
  let dropped=0;
  while(r.overflow.length) {
   const next=r.overflow[0];
@@ -36,9 +36,9 @@ export function appraise(player,group,validateNpc) {
  try {
   validateNpc();recoverDelivery(player);validateNpc();
   const c=inventory(player),before=Array.from({length:c.size},(_,i)=>c.getItem(i));
-  const input=`minecraft:${group}_mushroom`,source=selectFirstStack(before,input);
+  const input=GROUPS[group].inputItem,source=selectFirstStack(before,input);
   if(!source)throw new Error('鑑定するキノコを持っていません。');
-  const results=rollBatch(tables[group],source.amount),outputs=results.map(x=>({typeId:BY_ID.get(x.id).itemId,amount:x.amount}));
+  const results=rollBatch(tables[group],source.amount),outputs=results.map(x=>({typeId:ALL_BY_ID.get(x.id).itemId,amount:x.amount}));
   const prototypes=new Map(outputs.map(x=>[x.typeId,new ItemStack(x.typeId,1)]));
   const simplified=before.map((s,i)=>s?{typeId:s.typeId,amount:s.amount,maxAmount:s.maxAmount,
     mergeKey:prototypes.has(s.typeId)&&s.isStackableWith(prototypes.get(s.typeId))?s.typeId:`preserve:${i}`} : null);
@@ -63,7 +63,7 @@ export function appraise(player,group,validateNpc) {
    catch(rollbackError){logError('rollback requires manual review',rollbackError);}
    throw error;
   }
-  const fresh=registerDiscoveries(player,results.map(x=>BY_ID.get(x.id)));
+  const fresh=registerDiscoveries(player,results.map(x=>ALL_BY_ID.get(x.id)));
   const dropped=recoverDelivery(player);
   return {count:source.amount,results,fresh,dropped,sourceSlot:source.slot};
  } finally{locks.delete(player.id);}
