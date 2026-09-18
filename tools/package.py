@@ -3,8 +3,8 @@
 from pathlib import Path
 import json,zipfile,io,hashlib
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT.parent
-RUNTIME_NAME='Pinene_Mycology_Test_v1.2.0-handoff.mcaddon'
-HANDOFF_NAME='Pinene_Mycology_Codex_v1.2.0-handoff.zip'
+RUNTIME_NAME='Pine_Mycology_v1.0.0.mcaddon'
+HANDOFF_NAME='Pine_Mycology_Source_v1.0.0.zip'
 def zipbytes(folder):
  out=io.BytesIO()
  with zipfile.ZipFile(out,'w',zipfile.ZIP_DEFLATED,compresslevel=9) as z:
@@ -13,7 +13,7 @@ def zipbytes(folder):
  return out.getvalue()
 bp=zipbytes(ROOT/'pack/BP');rp=zipbytes(ROOT/'pack/RP')
 with zipfile.ZipFile(OUT/RUNTIME_NAME,'w',zipfile.ZIP_STORED) as z:
- z.writestr('Pinene_Mycology_BP.mcpack',bp);z.writestr('Pinene_Mycology_RP.mcpack',rp)
+ z.writestr('Pine_Mycology_BP.mcpack',bp);z.writestr('Pine_Mycology_RP.mcpack',rp)
 raw=sum(p.stat().st_size for p in (ROOT/'pack').rglob('*') if p.is_file())
 sizes={'runtimeRawBytes':raw,'bpMcpackBytes':len(bp),'rpMcpackBytes':len(rp),'mcaddonBytes':(OUT/RUNTIME_NAME).stat().st_size,'mcaddonFile':RUNTIME_NAME,'note':'The handoff ZIP also contains docs, tests, sources and previews. The mcaddon contains only runtime packs. Self-referential handoff ZIP size is not embedded here.'}
 (ROOT/'data/package_sizes.json').write_text(json.dumps(sizes,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
@@ -35,5 +35,5 @@ with zipfile.ZipFile(OUT/RUNTIME_NAME) as z:
 sizes['handoffZipBytes']=(OUT/HANDOFF_NAME).stat().st_size
 sizes['handoffZipSHA256']=hashlib.sha256((OUT/HANDOFF_NAME).read_bytes()).hexdigest()
 sizes['mcaddonSHA256']=hashlib.sha256((OUT/RUNTIME_NAME).read_bytes()).hexdigest()
-(OUT/'Pinene_Mycology_Download_Info.json').write_text(json.dumps(sizes,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+(OUT/'Pine_Mycology_Download_Info.json').write_text(json.dumps(sizes,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
 print(json.dumps(sizes,ensure_ascii=False,indent=2))
