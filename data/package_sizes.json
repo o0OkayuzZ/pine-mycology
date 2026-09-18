@@ -1,0 +1,8 @@
+{
+  "runtimeRawBytes": 239511,
+  "bpMcpackBytes": 36846,
+  "rpMcpackBytes": 53250,
+  "mcaddonBytes": 90370,
+  "mcaddonFile": "Pinene_Mycology_Test_v1.2.0-handoff.mcaddon",
+  "note": "The handoff ZIP also contains docs, tests, sources and previews. The mcaddon contains only runtime packs. Self-referential handoff ZIP size is not embedded here."
+}

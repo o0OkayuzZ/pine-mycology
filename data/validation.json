@@ -1,0 +1,24 @@
+{
+  "date": "2026-09-10",
+  "status": "static_and_mock_tests_passed_engine_untested",
+  "assertionsPassed": 1773,
+  "nodeTestsPassed": 32,
+  "registryEntries": 35,
+  "redWeightSum": 2899,
+  "brownWeightSum": 3183,
+  "npcCubes": 45,
+  "npcBones": 12,
+  "npcAtlas": [
+    128,
+    128
+  ],
+  "uvRectangles": 270,
+  "runtimeFiles": 105,
+  "rawBPBytes": 90461,
+  "rawRPBytes": 186197,
+  "runtimeRawBytes": 276658,
+  "rpPNGBytes": 60553,
+  "bedrockEngineExecuted": false,
+  "officialTypesChecked": false,
+  "officialSchemasChecked": false
+}

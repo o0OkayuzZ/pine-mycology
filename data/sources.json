@@ -1,0 +1,230 @@
+{
+  "maff_edibles": {
+    "title": "農林水産省：食卓で楽しむきのこ",
+    "url": "https://www.maff.go.jp/j/pr/aff/2110/spe1_02.html",
+    "scope": "栽培食用菌の形態・生態。人体への即時薬効の根拠ではない。",
+    "checkedAt": "2026-09-09"
+  },
+  "maff_fungi": {
+    "title": "農林水産省：きのこの生態",
+    "url": "https://www.maff.go.jp/j/pr/aff/2110/spe1_01.html",
+    "scope": "腐生・菌根共生などの一般的生態。",
+    "checkedAt": "2026-09-09"
+  },
+  "maff_wild": {
+    "title": "農林水産省：野生のきのこ",
+    "url": "https://www.maff.go.jp/j/pr/aff/1610/spe1_04.html",
+    "scope": "ベニヤマタケ・コウタケ等の形態。現実の食用判定には使わない。",
+    "checkedAt": "2026-09-09"
+  },
+  "akayama": {
+    "title": "石川県：アカヤマタケ",
+    "url": "https://www.pref.ishikawa.lg.jp/ringyo/kinoko/data/akayamatake.html",
+    "scope": "損傷・老成で黒変。有毒扱い。",
+    "checkedAt": "2026-09-09"
+  },
+  "beniiguchi": {
+    "title": "石川県：ベニイグチ",
+    "url": "https://www.pref.ishikawa.lg.jp/ringyo/kinoko/data/beniiguti.html",
+    "scope": "網目・管孔、食毒不明。学名は旧表記も参照。",
+    "checkedAt": "2026-09-09"
+  },
+  "beninaginata": {
+    "title": "筑波大学山岳科学センター：ベニナギナタタケ",
+    "url": "https://msc.tsukuba.ac.jp/web_museum/00081-2/",
+    "scope": "標本の和名・学名・形態。",
+    "checkedAt": "2026-09-09"
+  },
+  "chishio": {
+    "title": "京都大学芦生研究林：チシオタケ",
+    "url": "https://fserc.kyoto-u.ac.jp/asiu/garally/garally134.html",
+    "scope": "傷から暗赤色の液を出す。",
+    "checkedAt": "2026-09-09"
+  },
+  "haematopodin": {
+    "title": "Petersら：Haematopodinの全合成（1996）",
+    "url": "https://chemistry-europe.onlinelibrary.wiley.com/doi/abs/10.1002/jlac.199619960709",
+    "scope": "チシオタケ由来色素。血液ではない。",
+    "checkedAt": "2026-09-09"
+  },
+  "pycnoporus": {
+    "title": "森林総合研究所：樹立田山のきのこ分類体系",
+    "url": "https://www.ffpri.go.jp/kys/business/tatuta/kinoko/bunruitaikei.html",
+    "scope": "Pycnoporusの採用表記。Trametes表記との併記は命名体系の相違として扱う。",
+    "checkedAt": "2026-09-09"
+  },
+  "laccase": {
+    "title": "Uzanら：Pycnoporusのラッカーゼ（2010）",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/19968731/",
+    "scope": "P. coccineus等からの酵素研究。人体に食べさせた研究ではない。",
+    "checkedAt": "2026-09-09"
+  },
+  "benisenkou": {
+    "title": "ベニセンコウタケの分類照合",
+    "url": "https://www.pref.kyoto.jp/kankyo/mokuroku/bio/fungi.html",
+    "scope": "Clavaria roseaの採用名。細部寸法は図鑑本文から除外。",
+    "checkedAt": "2026-09-09"
+  },
+  "amanita_analysis": {
+    "title": "Suら：Amanita属のイボテン酸・ムシモール分析（2023）",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37611670/",
+    "scope": "参考文献。本文の全文照合未完了のため、ヒメベニテングタケでの特定化合物検出を本文では断定しない。",
+    "checkedAt": "2026-09-09"
+  },
+  "himebeni": {
+    "title": "石川県：ヒメベニテングタケ",
+    "url": "https://www.pref.ishikawa.lg.jp/ringyo/kinoko/data/himebenitengutake.html",
+    "scope": "有毒性・形態。",
+    "checkedAt": "2026-09-09"
+  },
+  "tamago": {
+    "title": "農林水産省：森で見つかるきのこ",
+    "url": "https://www.maff.go.jp/j/pr/aff/2110/spe1_04.html",
+    "scope": "タマゴタケの形態と食用菌としての扱い。生食の安全を保証しない。",
+    "checkedAt": "2026-09-09"
+  },
+  "benitengu": {
+    "title": "厚生労働省：ベニテングタケ",
+    "url": "https://www.mhlw.go.jp/topics/syokuchu/poison/kinoko_18.html",
+    "scope": "イボテン酸・ムシモール、神経症状。",
+    "checkedAt": "2026-09-09"
+  },
+  "benichawan": {
+    "title": "京都府：菌類目録",
+    "url": "https://www.pref.kyoto.jp/kankyo/mokuroku/bio/fungi.html",
+    "scope": "Sarcoscypha coccineaという従来名。日本産の厳密な種境界は別途再検討対象。",
+    "checkedAt": "2026-09-09"
+  },
+  "akaika": {
+    "title": "京都府レッドデータブック2015：アカイカタケ",
+    "url": "https://www.pref.kyoto.jp/kankyo/rdb/bio/db/fun0003.html",
+    "scope": "腕状構造と悪臭を持つグレバ。2015年の地域評価を現行全国評価とは扱わない。",
+    "checkedAt": "2026-09-09"
+  },
+  "kaen": {
+    "title": "厚生労働省：カエンタケ",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000143427.html",
+    "scope": "環状トリコテセン類・重篤な全身中毒。",
+    "checkedAt": "2026-09-09"
+  },
+  "oomino": {
+    "title": "環境省第5次レッドリスト：オオミノアカヤマタケ",
+    "url": "https://ikilog.biodic.go.jp/rl_rdb/b/13.html",
+    "scope": "国内EX、1936年以降の確実な記録なし。ゲームレア度と別。",
+    "checkedAt": "2026-09-09"
+  },
+  "lentinan": {
+    "title": "レンチナンとDectin-1の基礎研究（2022）",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9812608/",
+    "scope": "培養細胞・動物での研究。食事による即時の防御増加は支持しない。",
+    "checkedAt": "2026-09-09"
+  },
+  "hokori": {
+    "title": "森林管理局：きのこ図鑑",
+    "url": "https://www.rinya.maff.go.jp/tohoku/koho/tohoku/3_zukan/0_kinrui/1_kinoko.html",
+    "scope": "ホコリタケの名称・形態。",
+    "checkedAt": "2026-09-09"
+  },
+  "puffball": {
+    "title": "胞子放出の高速撮影研究（1949）",
+    "url": "https://www.sciencedirect.com/science/article/pii/S0007153649800301",
+    "scope": "ホコリタケ類の衝撃による胞子散布。全ての種の薬理作用を示すものではない。",
+    "checkedAt": "2026-09-09"
+  },
+  "kaki_mhlw": {
+    "title": "厚生労働省：カキシメジ",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000142705.html",
+    "scope": "ウスタリン酸のNa+/K+-ATPase阻害と胃腸症状。ページの旧学名には留意。",
+    "checkedAt": "2026-09-09"
+  },
+  "kaki_revision": {
+    "title": "Aokiら：日本産Tricholoma ustale群の分類再検討（2021）",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9721522/",
+    "scope": "T. kakishimeji等への整理。旧T. ustaleを単純な同物異名と断定しない。",
+    "checkedAt": "2026-09-09"
+  },
+  "kaki_gifu": {
+    "title": "岐阜医療科学大学：カキシメジ毒成分の可視化（2025）",
+    "url": "https://www.u-gifu-ms.ac.jp/news/20250725_8327/",
+    "scope": "T. kakishimejiとustalic acid（ウスタル酸）。",
+    "checkedAt": "2026-09-09"
+  },
+  "dokuyamadori": {
+    "title": "厚生労働省：ドクヤマドリ",
+    "url": "https://www.mhlw.go.jp/topics/syokuchu/poison/kinoko_10.html",
+    "scope": "激しい胃腸症状。原因機序を一つに断定しない。",
+    "checkedAt": "2026-09-09"
+  },
+  "tsukiyo": {
+    "title": "厚生労働省：ツキヨタケ",
+    "url": "https://www.mhlw.go.jp/topics/syokuchu/poison/kinoko_06.html",
+    "scope": "イルジン類と発光。毒と発光は別の性質。",
+    "checkedAt": "2026-09-09"
+  },
+  "nisekuro": {
+    "title": "厚生労働省：ニセクロハツ",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000143399.html",
+    "scope": "シクロプロペンカルボン酸、横紋筋融解。",
+    "checkedAt": "2026-09-09"
+  },
+  "nisekuro_primary": {
+    "title": "Matsuuraら：ニセクロハツ毒の同定（2009）",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/19465932/",
+    "scope": "cycloprop-2-ene carboxylic acidと筋障害。精密な分子標的はここでは断定しない。",
+    "checkedAt": "2026-09-09"
+  },
+  "matsutake_aroma": {
+    "title": "マツタケ香気成分の分析（1984）",
+    "url": "https://www.jstage.jst.go.jp/article/nskkk1962/31/1/31_1_14/_article",
+    "scope": "1-オクテン-3-オールや桂皮酸メチルなど。",
+    "checkedAt": "2026-09-09"
+  },
+  "porcini": {
+    "title": "環境省第5次レッドリスト：ヤマドリタケ",
+    "url": "https://ikilog.biodic.go.jp/rl_rdb/a/130.html",
+    "scope": "国内分布・DD。世界的希少性や薬効を意味しない。",
+    "checkedAt": "2026-09-09"
+  },
+  "munin": {
+    "title": "環境省第5次レッドリスト：ムニンヒメサカズキタケ",
+    "url": "https://ikilog.biodic.go.jp/rl_rdb/b/7.html",
+    "scope": "国内EX、1936年以降の記録なし。",
+    "checkedAt": "2026-09-09"
+  },
+  "virosa": {
+    "title": "厚生労働省：ドクツルタケ",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000142727.html",
+    "scope": "アマトキシンによるRNAポリメラーゼII阻害と遅発性中毒。",
+    "checkedAt": "2026-09-09"
+  },
+  "morel_cdc": {
+    "title": "CDC：モンタナ州のアミガサタケ集団食中毒（2024報告）",
+    "url": "https://www.cdc.gov/mmwr/volumes/73/wr/mm7310a1.htm",
+    "scope": "生・加熱不足の真のアミガサタケと症例。原因物質は未確定。",
+    "checkedAt": "2026-09-09"
+  },
+  "morel_fda": {
+    "title": "FDA：2023年アミガサタケ関連食中毒の調査",
+    "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/investigation-illnesses-morel-mushrooms-may-2023",
+    "scope": "加熱を安全保証として記述しない。偽アミガサタケの毒を本属に流用しない。",
+    "checkedAt": "2026-09-09"
+  },
+  "kinugasa": {
+    "title": "京都府：キヌガサタケ（2002資料）",
+    "url": "https://www.pref.kyoto.jp/kankyo/rdb2002/bio/db/fun0051.html",
+    "scope": "白い菌網などの形態のみ参照。古い保全区分を現在値として引用しない。",
+    "checkedAt": "2026-09-09"
+  },
+  "entoloma": {
+    "title": "厚生労働省：クサウラベニタケ",
+    "url": "https://www.mhlw.go.jp/topics/syokuchu/poison/kinoko_02.html",
+    "scope": "誤認・胃腸症状。旧来の広義名称であることに注意。",
+    "checkedAt": "2026-09-09"
+  },
+  "sarcopum": {
+    "title": "国立科学博物館：ウラベニホテイシメジ標本",
+    "url": "https://science-net.kahaku.go.jp/search/detail?cls=collect11&pkey=146399",
+    "scope": "和名・学名の照合。食用安全の根拠ではない。",
+    "checkedAt": "2026-09-09"
+  }
+}
