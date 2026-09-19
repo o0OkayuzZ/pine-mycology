@@ -169,6 +169,306 @@
     },
     "pinene_myco_nf_020": {
       "textures": "textures/items/mycology/nether/nf_020"
+    },
+    "pine_myco_nf_001": {
+      "textures": "textures/items/nether_fungi/nf_001"
+    },
+    "pine_myco_nf_002": {
+      "textures": "textures/items/nether_fungi/nf_002"
+    },
+    "pine_myco_nf_003": {
+      "textures": "textures/items/nether_fungi/nf_003"
+    },
+    "pine_myco_nf_004": {
+      "textures": "textures/items/nether_fungi/nf_004"
+    },
+    "pine_myco_nf_005": {
+      "textures": "textures/items/nether_fungi/nf_005"
+    },
+    "pine_myco_nf_006": {
+      "textures": "textures/items/nether_fungi/nf_006"
+    },
+    "pine_myco_nf_007": {
+      "textures": "textures/items/nether_fungi/nf_007"
+    },
+    "pine_myco_nf_008": {
+      "textures": "textures/items/nether_fungi/nf_008"
+    },
+    "pine_myco_nf_009": {
+      "textures": "textures/items/nether_fungi/nf_009"
+    },
+    "pine_myco_nf_010": {
+      "textures": "textures/items/nether_fungi/nf_010"
+    },
+    "pine_myco_nf_011": {
+      "textures": "textures/items/nether_fungi/nf_011"
+    },
+    "pine_myco_nf_012": {
+      "textures": "textures/items/nether_fungi/nf_012"
+    },
+    "pine_myco_nf_013": {
+      "textures": "textures/items/nether_fungi/nf_013"
+    },
+    "pine_myco_nf_014": {
+      "textures": "textures/items/nether_fungi/nf_014"
+    },
+    "pine_myco_nf_015": {
+      "textures": "textures/items/nether_fungi/nf_015"
+    },
+    "pine_myco_nf_016": {
+      "textures": "textures/items/nether_fungi/nf_016"
+    },
+    "pine_myco_nf_017": {
+      "textures": "textures/items/nether_fungi/nf_017"
+    },
+    "pine_myco_nf_018": {
+      "textures": "textures/items/nether_fungi/nf_018"
+    },
+    "pine_myco_nf_019": {
+      "textures": "textures/items/nether_fungi/nf_019"
+    },
+    "pine_myco_nf_020": {
+      "textures": "textures/items/nether_fungi/nf_020"
+    },
+    "pine_myco_nf_021": {
+      "textures": "textures/items/nether_fungi/nf_021"
+    },
+    "pine_myco_nf_022": {
+      "textures": "textures/items/nether_fungi/nf_022"
+    },
+    "pine_myco_nf_023": {
+      "textures": "textures/items/nether_fungi/nf_023"
+    },
+    "pine_myco_nf_024": {
+      "textures": "textures/items/nether_fungi/nf_024"
+    },
+    "pine_myco_nf_025": {
+      "textures": "textures/items/nether_fungi/nf_025"
+    },
+    "pine_myco_nf_026": {
+      "textures": "textures/items/nether_fungi/nf_026"
+    },
+    "pine_myco_nf_027": {
+      "textures": "textures/items/nether_fungi/nf_027"
+    },
+    "pine_myco_nf_028": {
+      "textures": "textures/items/nether_fungi/nf_028"
+    },
+    "pine_myco_nf_029": {
+      "textures": "textures/items/nether_fungi/nf_029"
+    },
+    "pine_myco_nf_030": {
+      "textures": "textures/items/nether_fungi/nf_030"
+    },
+    "pine_myco_nf_031": {
+      "textures": "textures/items/nether_fungi/nf_031"
+    },
+    "pine_myco_nf_032": {
+      "textures": "textures/items/nether_fungi/nf_032"
+    },
+    "pine_myco_nf_033": {
+      "textures": "textures/items/nether_fungi/nf_033"
+    },
+    "pine_myco_nf_034": {
+      "textures": "textures/items/nether_fungi/nf_034"
+    },
+    "pine_myco_nf_035": {
+      "textures": "textures/items/nether_fungi/nf_035"
+    },
+    "pine_myco_nf_036": {
+      "textures": "textures/items/nether_fungi/nf_036"
+    },
+    "pine_myco_nf_037": {
+      "textures": "textures/items/nether_fungi/nf_037"
+    },
+    "pine_myco_nf_038": {
+      "textures": "textures/items/nether_fungi/nf_038"
+    },
+    "pine_myco_nf_039": {
+      "textures": "textures/items/nether_fungi/nf_039"
+    },
+    "pine_myco_nf_040": {
+      "textures": "textures/items/nether_fungi/nf_040"
+    },
+    "pine_myco_nf_041": {
+      "textures": "textures/items/nether_fungi/nf_041"
+    },
+    "pine_myco_nf_042": {
+      "textures": "textures/items/nether_fungi/nf_042"
+    },
+    "pine_myco_nf_043": {
+      "textures": "textures/items/nether_fungi/nf_043"
+    },
+    "pine_myco_nf_044": {
+      "textures": "textures/items/nether_fungi/nf_044"
+    },
+    "pine_myco_nf_045": {
+      "textures": "textures/items/nether_fungi/nf_045"
+    },
+    "pine_myco_nf_046": {
+      "textures": "textures/items/nether_fungi/nf_046"
+    },
+    "pine_myco_nf_047": {
+      "textures": "textures/items/nether_fungi/nf_047"
+    },
+    "pine_myco_nf_048": {
+      "textures": "textures/items/nether_fungi/nf_048"
+    },
+    "pine_myco_nf_049": {
+      "textures": "textures/items/nether_fungi/nf_049"
+    },
+    "pine_myco_nf_050": {
+      "textures": "textures/items/nether_fungi/nf_050"
+    },
+    "pine_myco_nf_051": {
+      "textures": "textures/items/nether_fungi/nf_051"
+    },
+    "pine_myco_nf_052": {
+      "textures": "textures/items/nether_fungi/nf_052"
+    },
+    "pine_myco_nf_053": {
+      "textures": "textures/items/nether_fungi/nf_053"
+    },
+    "pine_myco_nf_054": {
+      "textures": "textures/items/nether_fungi/nf_054"
+    },
+    "pine_myco_nf_055": {
+      "textures": "textures/items/nether_fungi/nf_055"
+    },
+    "pine_myco_nf_056": {
+      "textures": "textures/items/nether_fungi/nf_056"
+    },
+    "pine_myco_nf_057": {
+      "textures": "textures/items/nether_fungi/nf_057"
+    },
+    "pine_myco_nf_058": {
+      "textures": "textures/items/nether_fungi/nf_058"
+    },
+    "pine_myco_nf_059": {
+      "textures": "textures/items/nether_fungi/nf_059"
+    },
+    "pine_myco_nf_060": {
+      "textures": "textures/items/nether_fungi/nf_060"
+    },
+    "pine_myco_nf_061": {
+      "textures": "textures/items/nether_fungi/nf_061"
+    },
+    "pine_myco_nf_062": {
+      "textures": "textures/items/nether_fungi/nf_062"
+    },
+    "pine_myco_nf_063": {
+      "textures": "textures/items/nether_fungi/nf_063"
+    },
+    "pine_myco_nf_064": {
+      "textures": "textures/items/nether_fungi/nf_064"
+    },
+    "pine_myco_nf_065": {
+      "textures": "textures/items/nether_fungi/nf_065"
+    },
+    "pine_myco_nf_066": {
+      "textures": "textures/items/nether_fungi/nf_066"
+    },
+    "pine_myco_nf_067": {
+      "textures": "textures/items/nether_fungi/nf_067"
+    },
+    "pine_myco_nf_068": {
+      "textures": "textures/items/nether_fungi/nf_068"
+    },
+    "pine_myco_nf_069": {
+      "textures": "textures/items/nether_fungi/nf_069"
+    },
+    "pine_myco_nf_070": {
+      "textures": "textures/items/nether_fungi/nf_070"
+    },
+    "pine_myco_nf_071": {
+      "textures": "textures/items/nether_fungi/nf_071"
+    },
+    "pine_myco_nf_072": {
+      "textures": "textures/items/nether_fungi/nf_072"
+    },
+    "pine_myco_nf_073": {
+      "textures": "textures/items/nether_fungi/nf_073"
+    },
+    "pine_myco_nf_074": {
+      "textures": "textures/items/nether_fungi/nf_074"
+    },
+    "pine_myco_nf_075": {
+      "textures": "textures/items/nether_fungi/nf_075"
+    },
+    "pine_myco_nf_076": {
+      "textures": "textures/items/nether_fungi/nf_076"
+    },
+    "pine_myco_nf_077": {
+      "textures": "textures/items/nether_fungi/nf_077"
+    },
+    "pine_myco_nf_078": {
+      "textures": "textures/items/nether_fungi/nf_078"
+    },
+    "pine_myco_nf_079": {
+      "textures": "textures/items/nether_fungi/nf_079"
+    },
+    "pine_myco_nf_080": {
+      "textures": "textures/items/nether_fungi/nf_080"
+    },
+    "pine_myco_nf_081": {
+      "textures": "textures/items/nether_fungi/nf_081"
+    },
+    "pine_myco_nf_082": {
+      "textures": "textures/items/nether_fungi/nf_082"
+    },
+    "pine_myco_nf_083": {
+      "textures": "textures/items/nether_fungi/nf_083"
+    },
+    "pine_myco_nf_084": {
+      "textures": "textures/items/nether_fungi/nf_084"
+    },
+    "pine_myco_nf_085": {
+      "textures": "textures/items/nether_fungi/nf_085"
+    },
+    "pine_myco_nf_086": {
+      "textures": "textures/items/nether_fungi/nf_086"
+    },
+    "pine_myco_nf_087": {
+      "textures": "textures/items/nether_fungi/nf_087"
+    },
+    "pine_myco_nf_088": {
+      "textures": "textures/items/nether_fungi/nf_088"
+    },
+    "pine_myco_nf_089": {
+      "textures": "textures/items/nether_fungi/nf_089"
+    },
+    "pine_myco_nf_090": {
+      "textures": "textures/items/nether_fungi/nf_090"
+    },
+    "pine_myco_nf_091": {
+      "textures": "textures/items/nether_fungi/nf_091"
+    },
+    "pine_myco_nf_092": {
+      "textures": "textures/items/nether_fungi/nf_092"
+    },
+    "pine_myco_nf_093": {
+      "textures": "textures/items/nether_fungi/nf_093"
+    },
+    "pine_myco_nf_094": {
+      "textures": "textures/items/nether_fungi/nf_094"
+    },
+    "pine_myco_nf_095": {
+      "textures": "textures/items/nether_fungi/nf_095"
+    },
+    "pine_myco_nf_096": {
+      "textures": "textures/items/nether_fungi/nf_096"
+    },
+    "pine_myco_nf_097": {
+      "textures": "textures/items/nether_fungi/nf_097"
+    },
+    "pine_myco_nf_098": {
+      "textures": "textures/items/nether_fungi/nf_098"
+    },
+    "pine_myco_nf_099": {
+      "textures": "textures/items/nether_fungi/nf_099"
+    },
+    "pine_myco_nf_100": {
+      "textures": "textures/items/nether_fungi/nf_100"
     }
   }
 }
