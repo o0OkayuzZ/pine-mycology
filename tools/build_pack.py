@@ -43,7 +43,13 @@ for e in NF:
  item_file=e['itemId'].split(':',1)[1]+'.json'
  jsave(BP/f'items/nether_fungi/{item_file}',{'format_version':'1.21.90','minecraft:item':{'description':{'identifier':e['itemId'],'menu_category':{'category':'items'}},'components':c}})
  texdata[e['textureKey']]={'textures':e['texturePath']}
-(BP/'scripts/mycology/nether_registry.js').write_text('// Generated from data/nether_fungi.json. Edit canonical data, not this file.\nexport const NETHER_FUNGI = '+json.dumps(NF,ensure_ascii=False,separators=(',',':'))+';\nexport const NF_BY_ID = new Map(NETHER_FUNGI.map(x=>[x.id,x]));\nexport const NF_BY_ITEM = new Map(NETHER_FUNGI.map(x=>[x.itemId,x]));\n',encoding='utf8')
+(BP/'scripts/mycology/nether_registry.js').write_text(
+    '// Generated from data/nether_fungi.json. Edit canonical data, not this file.\\n'
+    'export const NETHER_FUNGI = '+json.dumps(NF,ensure_ascii=False,separators=(',',':'))+';\\n'
+    'export const NF_BY_ID = new Map(NETHER_FUNGI.map(x=>[x.id,x]));\\n'
+    'export const NF_BY_ITEM = new Map(NETHER_FUNGI.map(x=>[x.itemId,x]));\\n',
+    encoding='utf8'
+)
 (BP/'scripts/mycology/catalog.js').write_text("""import { MUSHROOMS } from './registry.js';
 import { NETHER_FUNGI } from './nether_registry.js';
 export const ALL_FUNGI=[...MUSHROOMS,...NETHER_FUNGI];

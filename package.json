@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node --test tests/core.test.mjs && node --experimental-loader ./tests/mock-loader.mjs --test tests/adapters.test.mjs && node --experimental-loader ./tests/mock-loader.mjs --test tests/field-guide.test.mjs && node --experimental-loader ./tests/mock-loader.mjs --test tests/ui.test.mjs && node --experimental-loader ./tests/mock-loader.mjs --test tests/reveal.test.mjs",
+    "test": "node --test tests/core.test.mjs tests/nether-fungi.test.mjs && node --experimental-loader ./tests/mock-loader.mjs --test tests/adapters.test.mjs && node --experimental-loader ./tests/mock-loader.mjs --test tests/field-guide.test.mjs && node --experimental-loader ./tests/mock-loader.mjs --test tests/ui.test.mjs && node --experimental-loader ./tests/mock-loader.mjs --test tests/reveal.test.mjs",
     "validate": "python tools/validate.py",
     "typecheck": "tsc -p tsconfig.json"
   },
