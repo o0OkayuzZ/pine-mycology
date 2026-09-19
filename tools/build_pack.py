@@ -41,9 +41,9 @@ for e in NF:
     'minecraft:food':{'nutrition':e['food']['nutrition'],'saturation_modifier':e['food']['saturationModifier'],'can_always_eat':True},
     'minecraft:use_modifiers':{'use_duration':1.6,'movement_modifier':0.35},'minecraft:use_animation':'eat','pinene:myco_consume':{}}
  item_file=e['itemId'].split(':',1)[1]+'.json'
- jsave(BP/f'items/mycology/nether/{item_file}',{'format_version':'1.21.90','minecraft:item':{'description':{'identifier':e['itemId'],'menu_category':{'category':'items'}},'components':c}})
+ jsave(BP/f'items/nether_fungi/{item_file}',{'format_version':'1.21.90','minecraft:item':{'description':{'identifier':e['itemId'],'menu_category':{'category':'items'}},'components':c}})
  texdata[e['textureKey']]={'textures':e['texturePath']}
-(BP/'scripts/mycology/nether_registry.js').write_text('// Generated from data/nether_fungi.json.\\nexport const NETHER_FUNGI = '+json.dumps(NF,ensure_ascii=False,separators=(',',':'))+';\\nexport const NF_BY_ID = new Map(NETHER_FUNGI.map(x=>[x.id,x]));\\nexport const NF_BY_ITEM = new Map(NETHER_FUNGI.map(x=>[x.itemId,x]));\\n',encoding='utf8')
+(BP/'scripts/mycology/nether_registry.js').write_text('// Generated from data/nether_fungi.json. Edit canonical data, not this file.\nexport const NETHER_FUNGI = '+json.dumps(NF,ensure_ascii=False,separators=(',',':'))+';\nexport const NF_BY_ID = new Map(NETHER_FUNGI.map(x=>[x.id,x]));\nexport const NF_BY_ITEM = new Map(NETHER_FUNGI.map(x=>[x.itemId,x]));\n',encoding='utf8')
 (BP/'scripts/mycology/catalog.js').write_text("""import { MUSHROOMS } from './registry.js';
 import { NETHER_FUNGI } from './nether_registry.js';
 export const ALL_FUNGI=[...MUSHROOMS,...NETHER_FUNGI];
@@ -52,8 +52,8 @@ export const ALL_BY_ITEM=new Map(ALL_FUNGI.map(x=>[x.itemId,x]));
 export const GROUPS=Object.freeze({
  red:{inputItem:'minecraft:red_mushroom',label:'赤色キノコ',icon:'textures/items/mycology/r11'},
  brown:{inputItem:'minecraft:brown_mushroom',label:'茶色キノコ',icon:'textures/items/mycology/b01'},
- crimson:{inputItem:'minecraft:crimson_fungus',label:'深紅の菌茸',icon:'textures/items/mycology/nether/nf_001'},
- warped:{inputItem:'minecraft:warped_fungus',label:'歪んだ菌茸',icon:'textures/items/mycology/nether/nf_005'}
+ crimson:{inputItem:'minecraft:crimson_fungus',label:'深紅の菌茸',icon:'textures/items/nether_fungi/nf_001'},
+ warped:{inputItem:'minecraft:warped_fungus',label:'歪んだ菌茸',icon:'textures/items/nether_fungi/nf_005'}
 });
 """,encoding='utf8')
 jsave(RP/'textures/item_texture.json',{'resource_pack_name':'pinene_mycology','texture_name':'atlas.items','texture_data':texdata})
