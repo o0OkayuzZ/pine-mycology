@@ -13,7 +13,7 @@
       },
       "minecraft:icon": {
         "textures": {
-          "default": "pine_myco_nf_020"
+          "default": "pinene_myco_nf_020"
         }
       },
       "minecraft:max_stack_size": 64,
