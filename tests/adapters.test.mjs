@@ -28,9 +28,15 @@ test('adapter: poison is persistent before delay; repeated use cannot defer it',
 });
 test('adapter: R06 fixed health cost then strength; lethal cost gives no buff',()=>{reset();const p=player(),d=MUSHROOMS.find(x=>x.id==='R06');consume(p,new ItemStack(d.itemId));assert.equal(p.health,18);assert.equal(p.effects.get('minecraft:strength').amplifier,0);p.effects.clear();p.health=2;consume(p,new ItemStack(d.itemId));assert.equal(p.health,0);assert.equal(p.effects.size,0);});
 test('adapter: normal/admin NPC is usable but drops no loot on death',()=>{reset();const p=player(),n=new FakeEntity('n',CONFIG.npcType,p.dimension);n.location={x:3,y:64,z:0};world.entities.set(n.id,n);assert(canUse(p,n));world.afterEvents.entityDie.emit({deadEntity:n});assert.equal(p.dimension.drops.length,0);});
-test('adapter: active natural death gives exactly 64+64 once',()=>{
+test('adapter: active natural death gives four 64-stacks exactly once',()=>{
  reset();const p=player(),n=new FakeEntity('n',CONFIG.npcType,p.dimension);world.entities.set(n.id,n);n.setDynamicProperty(CONFIG.naturalTokenKey,'natural');world.setDynamicProperty(CONFIG.leaseKey,JSON.stringify({version:1,entityId:'n',token:'natural',expiresAt:Date.now()+100000}));
- world.afterEvents.entityDie.emit({deadEntity:n});world.afterEvents.entityDie.emit({deadEntity:n});assert.deepEqual(p.dimension.drops.map(x=>[x.item.typeId,x.item.amount]),[['minecraft:red_mushroom',64],['minecraft:brown_mushroom',64]]);
+ world.afterEvents.entityDie.emit({deadEntity:n});world.afterEvents.entityDie.emit({deadEntity:n});assert.deepEqual(p.dimension.drops.map(x=>[x.item.typeId,x.item.amount]),[['minecraft:red_mushroom',64],['minecraft:brown_mushroom',64],['minecraft:crimson_fungus',64],['minecraft:warped_fungus',64]]);
+});
+test('adapter: naming an active natural appraiser settles it and disables wild death loot',()=>{
+ reset();const p=player(),n=new FakeEntity('n',CONFIG.npcType,p.dimension);world.entities.set(n.id,n);n.setDynamicProperty(CONFIG.naturalTokenKey,'natural');world.setDynamicProperty(CONFIG.leaseKey,JSON.stringify({version:1,entityId:'n',token:'natural',expiresAt:Date.now()+100000}));
+ n.nameTag='Home Appraiser';world.afterEvents.playerInteractWithEntity.emit({player:p,target:n,beforeItemStack:new ItemStack('minecraft:name_tag')});
+ assert.equal(n.getDynamicProperty(CONFIG.naturalTokenKey),undefined);assert.equal(world.getDynamicProperty(CONFIG.leaseKey),undefined);assert.equal(canUse(p,n),true);
+ world.afterEvents.entityDie.emit({deadEntity:n});assert.equal(p.dimension.drops.length,0);
 });
 test('adapter: stale loaded natural token is removed without loot',()=>{reset();const p=player(),n=new FakeEntity('old',CONFIG.npcType,p.dimension);n.setDynamicProperty(CONFIG.naturalTokenKey,'old');world.entities.set(n.id,n);world.afterEvents.entityLoad.emit({entity:n});assert.equal(n.isValid,false);assert.equal(p.dimension.drops.length,0);});
 test('adapter: unloaded unexpired natural lease is preserved on restart',()=>{reset();player();const l={version:1,entityId:'unloaded',token:'x',expiresAt:Date.now()+100000};world.setDynamicProperty(CONFIG.leaseKey,JSON.stringify(l));initializeNpc();assert.deepEqual(JSON.parse(world.getDynamicProperty(CONFIG.leaseKey)),l);});
