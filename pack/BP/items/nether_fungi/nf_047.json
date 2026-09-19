@@ -1,0 +1,37 @@
+{
+  "format_version": "1.21.90",
+  "minecraft:item": {
+    "description": {
+      "identifier": "pinene:nf_047",
+      "menu_category": {
+        "category": "items"
+      }
+    },
+    "components": {
+      "minecraft:display_name": {
+        "value": "myco.nf_047.name"
+      },
+      "minecraft:icon": {
+        "textures": {
+          "default": "pine_myco_nf_047"
+        }
+      },
+      "minecraft:max_stack_size": 64,
+      "minecraft:cooldown": {
+        "category": "pine_mycology_nf",
+        "duration": 4
+      },
+      "minecraft:food": {
+        "nutrition": 0,
+        "saturation_modifier": 0.1,
+        "can_always_eat": true
+      },
+      "minecraft:use_modifiers": {
+        "use_duration": 1.6,
+        "movement_modifier": 0.35
+      },
+      "minecraft:use_animation": "eat",
+      "pinene:myco_consume": {}
+    }
+  }
+}
